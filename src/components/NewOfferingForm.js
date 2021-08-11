@@ -2,11 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './NewOfferingForm.css';
-// how to make nullable values here ?????????
+// how to make nullable values here ????????? SEARCH: 'create optional' tags, is_nullable=t or =f on form fields themselves
 // correct offering fields in place? correct default data types?
 // should setting avail_inv == total_inv stay off? 
 // bool default vals correct?
-// how to use datetime on FE, for contribution_date attr default val?
+// how to use datetime on FE, for contribution_date attr default val? >>>> there's smthg for tht
 // should dropoff_location be an attr here?
 const NewOfferingForm = (props) => {
     const [offeringForm, setOfferingForm] = useState({

@@ -5,6 +5,7 @@ import './NewUserForm.css'
 import PropTypes from 'prop-types';
 
 /* HOW TO HOOK UP O-AUTH TO THE USER FORM? */
+    /* SEARCH TUTORIAL  */
 
 
 /* should user_type be here or somewhere else? how to have them choose 'F', 'C' or 'N'? */

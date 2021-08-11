@@ -12,7 +12,7 @@ const CategoryList = (props) => {
             key= {category.id} // own names or BE attr names?
             title= {category.title}
             id= {category.id} // in template 2x
-            // foods = {category.associated_foods} ???
+            // foods = {category.associated_foods} >>>>>> no need!
             onCategorySelect= {props.selectedCategory}
             deleteCategory= {props.deleteCategory}
             />

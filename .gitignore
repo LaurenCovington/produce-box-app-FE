@@ -1,3 +1,8 @@
+# copy-paste from group project fe repo
+.DS_Store
+.vscode
+.env 
+
 # copy-paste from https://github.com/Ada-C15/react-tic-tac-toe/blob/master/.gitignore 
 # dependencies
 /node_modules

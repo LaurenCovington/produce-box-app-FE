@@ -14,6 +14,7 @@ import PropTypes from 'prop-types';
 const NewUserForm = (props) => {
     const [userForm, setUserForm] = useState({
         name: '',
+        email: '',
         user_type: '', 
         username: '',
         password: '',
@@ -32,6 +33,13 @@ const NewUserForm = (props) => {
         setUserForm({
             ...userForm,
             name: event.target.value
+        })
+    }
+
+    const onEmailChange = (event) => {
+        setUserForm({
+            ...userForm,
+            email: event.target.value
         })
     }
 
@@ -111,6 +119,7 @@ const NewUserForm = (props) => {
 
         props.createNewUser({
             name: userForm.name,
+            email: userForm.email,
             user_type: userForm.user_type,
             username: userForm.username,
             password: userForm.password,
@@ -126,6 +135,7 @@ const NewUserForm = (props) => {
 
         setUserForm({
             name: '',
+            email: '',
             user_type: '',
             username: '',
             password: '',
@@ -142,6 +152,7 @@ const NewUserForm = (props) => {
 
     return (
         <form onSubmit={onFormSubmit}>
+            <h1>User Registration Page</h1>
             <div>
                 <label>Preferred Name</label> 
                 <input
@@ -151,13 +162,30 @@ const NewUserForm = (props) => {
                 />
             </div>
 
-            <div> {/* should this be here? */}
+            <div>
+                <label>Email</label> 
+                <input
+                    value={userForm.email}
+                    onChange={ onEmailChange }
+                    className={(userForm.email.length === 0) || (userForm.email.length > 50)? 'invalid-form-input' : ''}
+                />
+            </div>
+
+            <div>
                 <label>User Type</label> 
                 <input
                     value={userForm.user_type}
-                    onChange={ onUserTypeChange}
+                    onChange={ onUserTypeChange }
                     className={(userForm.user_type.length === 0) || (userForm.user_type.length > 20)? 'invalid-form-input' : ''}
                 />
+
+                {/* DESIRED ^^ ALT: <label>User Type</label>
+                        <select onChange={ onUserTypeChange } defaultValue="Select User Type">  <<< what should be in brackets?
+                            <option defaultValue>Select User Type</option>
+                            <option value="male">Farmer</option>
+                            <option value="female">Community Resident</option>
+                            <option value="female">NPO Rep</option>
+                        </select><br /> */}
             </div>
 
             <div> {/* check className logic */}

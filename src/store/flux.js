@@ -28,6 +28,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log("App just loaded, syncing local storage session token");
 				if(token && token !=="" && token!==undefined) setStore({ token: token});
 			},
+			// copied and pased from above.. is this what's needed?
+			syncUserFromSessionStore: () => {
+				const user = sessionStorage.getItem("user");
+				console.log("App just loaded, syncing local storage session user");
+				if(user && user !=="" && user!==undefined) setStore({ user: user});
+			},
 
 			logout: () => {
 				sessionStorage.removeItem("token");
@@ -48,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 				
 				try{
-					const resp = await fetch('localhost:5000/token', opts)
+					const resp = await fetch('https://produce-box-app.herokuapp.com/', opts)
 					if (resp.status !== 200){
 						alert("There's an error caught from flux.js");
 						return false;

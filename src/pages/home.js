@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
-//import rigoImageUrl from "../../img/rigo-baby.jpg";
+// home page: this is what users will see after logging in
 //import "../../styles/home.scss";
 // warning on 11???
 
@@ -12,10 +12,11 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
+			<h1>Welcome!</h1>
 			<p>
 				<img alt="tutorial guy's pic" />
 			</p>
+
 			<div className="alert alert-info">{store.message}</div>
 			<p>
 				This boilerplate comes with lots of documentation:{" "}

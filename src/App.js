@@ -16,25 +16,9 @@ import Layout from './store/layout.js'
 
 function App() {
   return (
-    <Layout />
-    //<div><Login /></div> // not wrapped in context; trying to get context that doesnt exist yet; nest Login w/i Layout context tag
-    //<div><Login /></div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <div className="App-Layout">
+      <Layout />
+    </div>
   );
 }
 

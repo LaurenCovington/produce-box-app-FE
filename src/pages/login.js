@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 
 // is "/" param inside history.push() correct???? same as in layout.js <Home /> component; anything to add on BE?
 export const Login = () => {
-	const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context); // useContext must be beneath 
     const [ email, setEmail ] = useState("");  
     const [ password, setPassword ] = useState("");
     const history = useHistory();
@@ -18,7 +18,7 @@ export const Login = () => {
         actions.login(email, password)
     };
 
-    if(store.token && store.token !== "" && store.token !== undefined) history.push("/");
+    if(store.token && store.token !== "" && store.token !== undefined) history.push("/"); // is store's null, this wont run
 
 	return (
 		<div className="text-center mt-5">

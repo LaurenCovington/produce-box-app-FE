@@ -1,3 +1,4 @@
+/* line 38 placeholder="whatever" is the default text inside a field that prompts users */
 /* farmer creates relevant categories for region by filling out this form */
 import React from 'react';
 import { useState } from 'react';
@@ -35,6 +36,7 @@ const NewCategoryForm = (props) => {
             <div>
                 <label>Title</label> 
                 <input
+                    placeholder="Category Name"
                     value={categoryForm.title}
                     onChange={ onTitleChange }
                     className={(categoryForm.title.length === 0)? 'invalid-form-input' : ''}

@@ -2,7 +2,7 @@
 // import axios from 'axios';
 import logo from './logo.svg'; // REMOVE LATER
 import { Login } from './pages/login.js'
-import { Layout } from './store/layout.js'
+import Layout from './store/layout.js'
 // import './App.css';
 // import PropTypes from 'prop-types'; // https://www.freecodecamp.org/learn/front-end-libraries/react/use-proptypes-to-define-the-props-you-expect
 // import CategoryList from './components/CategoryList'
@@ -16,7 +16,8 @@ import { Layout } from './store/layout.js'
 
 function App() {
   return (
-    <div><Login /></div>
+    <Layout />
+    //<div><Login /></div> // not wrapped in context; trying to get context that doesnt exist yet; nest Login w/i Layout context tag
     //<div><Login /></div>
     // <div className="App">
     //   <header className="App-header">

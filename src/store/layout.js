@@ -22,6 +22,7 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
+
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -46,4 +47,4 @@ const Layout = () => {
 	);
 };
 
-export default injectContext(Layout);
+export default injectContext(Layout); // equiv is importing injectContext in App.js...

@@ -1,4 +1,4 @@
-// LINES 51, 75 CORRECT THE ROUTE!! (see 1:07:45 in https://www.youtube.com/watch?v=8-W2O_R95Pk&t=4065s&ab_channel=BreatheCode to see how he did it (straight urls))
+// LINES 57, 88 CORRECT THE ROUTE!! (see 1:07:45 in https://www.youtube.com/watch?v=8-W2O_R95Pk&t=4065s&ab_channel=BreatheCode to see how he did it (straight urls))
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -42,6 +42,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			login: async (email, password) => {
+				const opts = {
+					method: 'POST',
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						"email": email,
+						"password": password
+					})
+				};
+				
+				try{
+					const resp = await fetch('https://produce-box-app.herokuapp.com/', opts)
+					if (resp.status !== 200){
+						alert("There's an error caught from flux.js");
+						return false;
+					}
+				
+					const data = await resp.json();
+					console.log("this came from backend: ", data);
+					sessionStorage.setItem("token", data.access_token);
+					setStore({ token: data.access_token})
+					return true;
+				}
+				catch(error){
+					console.error("There's been an error.")
+				}
+			},
+
+			/* registration actions to be built here */
+			register: async (email, password) => {
 				const opts = {
 					method: 'POST',
 					headers: {

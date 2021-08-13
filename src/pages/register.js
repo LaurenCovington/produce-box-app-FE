@@ -25,8 +25,8 @@ export const Register = () => {
     // check if useHistory is relevant for registration...
     const history = useHistory();
     //const token = sessionStorage.getItem("token") >> from login
-    console.log('Verifying token: ' + store.user)
-
+    //console.log('Verifying token: ' + store.user)
+    // validation: add logic to decline email's already in the db -- hit BE create_user() 
 
     const handleClick = () => {
         actions.register(name, email, user_type, username, password, address, phone,

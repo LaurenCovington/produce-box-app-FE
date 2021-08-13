@@ -23,8 +23,6 @@ const CategoryList = (props) => {
 
 export default CategoryList;
 
-
-
 // enforce existence and proper data types
 CategoryList.propTypes = {
     categoriesData: PropTypes.arrayOf(PropTypes.shape({
@@ -36,5 +34,4 @@ CategoryList.propTypes = {
     deleteCategory: PropTypes.func.isRequired,
     selectedCategory: PropTypes.func.isRequired
 }
-
 

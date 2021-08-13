@@ -12,12 +12,15 @@ import injectContext from "../store/appContext"; // means you don't have to keep
 
 import { Navbar } from "../components/navbar"; //////////////////////
 import { Footer } from "../components/footer"; //////////////////////
+//import CategoryList from "../components/CategoryList"
+import OfferingList from "../components/OfferingList"
 import Register from "../pages/register";
 
-//create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
+	
+	// routing through a FE menu, not routing to the BE API
 	const basename = process.env.BASENAME || "";
 
 	return (
@@ -28,17 +31,24 @@ const Layout = () => {
 					{/* any components that should render across the board go here, above <Switch /> */}
 					<Switch>
 						{/* any components that should render to specific pages should go here w other routes */}
-						<Route exact path="/"> {/* " pba.com/ " */}
-							<Home />
-						</Route>
 						<Route exact path="/signup"> {/* " pba.com/signup " */}
 							<Register />
 						</Route>
+						<Route exact path="/login"> {/* " pba.com/login " */}
+							<Login />
+						</Route>
+						<Route exact path="/"> {/* " pba.com/ " */}
+							<Home />
+						</Route>
+						
+						<Route exact path="/food-categories/<category_id>/offerings"> {/* HOW TO EQUIV ' ...com/food-categories/<category_id>/offerings ' ???? */}
+							<OfferingList />
+						</Route>
+
+
+
 						<Route exact path="/demo"> {/* " pba.com/demo " */}
 							<Demo />
-						</Route>
-                        <Route exact path="/login"> {/* " pba.com/login " */}
-							<Login />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

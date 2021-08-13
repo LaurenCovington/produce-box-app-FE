@@ -36,6 +36,7 @@ export const Register = () => {
     if(store.user && store.user !== "" && store.user !== undefined) history.push("/login"); // if user's not there, push to login page
 
 	return (
+
 		<div className="text-center mt-5">
 			<h1>Register Here</h1>
                 { (store.user && store.user !== "" && store.user !== undefined) ? "Welcome, " + store.user : 

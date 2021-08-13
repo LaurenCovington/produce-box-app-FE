@@ -1,8 +1,11 @@
+import axios from "axios";
+
 // LINES 57, 88 CORRECT THE ROUTE!! (see 1:07:45 in https://www.youtube.com/watch?v=8-W2O_R95Pk&t=4065s&ab_channel=BreatheCode to see how he did it (straight urls))
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			token: null,
+			user: null,
 			message: null,
 			demo: [
 				{
@@ -28,7 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log("App just loaded, syncing local storage session token");
 				if(token && token !=="" && token!==undefined) setStore({ token: token});
 			},
-			// copied and pased from above.. is this what's needed?
+			// is this what's needed?
 			syncUserFromSessionStore: () => {
 				const user = sessionStorage.getItem("user");
 				console.log("App just loaded, syncing local storage session user");
@@ -52,55 +55,66 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"password": password
 					})
 				};
-				
-				try{
-					const resp = await fetch('https://produce-box-app.herokuapp.com/', opts)
-					if (resp.status !== 200){
-						alert("There's an error caught from flux.js");
-						return false;
-					}
-				
-					const data = await resp.json();
-					console.log("this came from backend: ", data);
-					sessionStorage.setItem("token", data.access_token);
-					setStore({ token: data.access_token})
-					return true;
-				}
-				catch(error){
-					console.error("There's been an error.")
-				}
-			},
-
+					axios.post('http://localhost:5000/token', opts).then(response => {
+						if (response.status !== 200){
+							alert("There's an error caught from flux.js - 1st");
+							return false;
+						}
+					
+						const data = response.json();
+						console.log("this came from log backend: ", data);
+						sessionStorage.setItem("token", data.access_token);
+						setStore({ token: data.access_token})
+						return true;
+					}).catch((error) => console.error("There's been an error in login",  error));
+				},
 			/* registration actions to be built here */
-			register: async (email, password) => {
+			register: async (name, email, password, user_type, address, phone, contribution_dropoff, donations_sent, donations_received, organization, delivery_count) => {
 				const opts = {
 					method: 'POST',
 					headers: {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify({
+						"name": name,
 						"email": email,
-						"password": password
+						"password": password,
+						"user_type": user_type,
+						"address": address,
+						"phone": phone,
+						"contribution_dropoff": contribution_dropoff,
+						"donations_sent": donations_sent,
+						"donations_received": donations_received,
+						"organization": organization,
+						"delivery_count": delivery_count
 					})
 				};
-				
-				try{
-					const resp = await fetch('https://produce-box-app.herokuapp.com/', opts)
-					if (resp.status !== 200){
-						alert("There's an error caught from flux.js");
-						return false;
-					}
-				
-					const data = await resp.json();
-					console.log("this came from backend: ", data);
-					sessionStorage.setItem("token", data.access_token);
-					setStore({ token: data.access_token})
-					return true;
-				}
-				catch(error){
-					console.error("There's been an error.")
-				}
-			},
+					{/* claire: no fetch for POSTs, use axios */}
+					axios.post('http://localhost:5000/users', {
+						"name": name,
+						"email": email,
+						"password": password,
+						"user_type": user_type,
+						"address": address,
+						"phone": phone,
+						"contribution_dropoff": contribution_dropoff,
+						"donations_sent": donations_sent,
+						"donations_received": donations_received,
+						"organization": organization,
+						"delivery_count": delivery_count
+					}).then(response => {
+						if (response.status !== 200){
+							alert("There's an error caught from flux.js - 2nd");
+							return false;
+						}
+					
+						const data = response.json();
+						console.log("this came from reg backend: ", data);
+						sessionStorage.setItem("user", data.access_user); {/* is .access_user okay to make up, or did i rename a built-in incorrectly?  */}
+						setStore({ user: data.access_user})
+						return true;
+					}).catch((error) => console.error("There's been an error in register", error.message));
+				},
 
 			getMessage: () => {
 				const store = getStore();

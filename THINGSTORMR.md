@@ -15,3 +15,10 @@ https://produce-box-app.herokuapp.com/
 
 # added the following to package_json, beneath "private" key - 8.12.21
 - "proxy": "https://produce-box-app.herokuapp.com",
+
+
+# Category component in layout must redirect to OfferingList page
+
+# prevent editing offerings on the wrong pages
+    - separation of concerns <-- google this >
+    - create 2 offering comps, one for displaying and another for editing (editOffering.js would also be in Layout.js, in a different <Route> !!!)

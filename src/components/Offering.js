@@ -4,37 +4,54 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-
+/* LOGIC FROM GROUP PROJ BUT MAKE SURE EDITING OFFERINGS ISN'T POSSIBLE ON HOMEPAGE/FIGURE OUT WHERE TO PUT IT  */
 const Offering = (props) => {
-
-    const [newMessage, setNewMessage] = useState({'message': props.message});
-
-    const [showEditBox, setShowEditBox] = useState(false)
+    const [newOfferingDetails, setNewOfferingDetails] = useState({'name': props.name,
+                                                            "total_inventory": props.total_inventory,
+                                                            "usda_organic": props.usda_organic,
+                                                            "usage_time_limit": props.usage_time_limit,
+                                                            "side_effects": props.side_effect,
+                                                            "contribution_date": props.contribution_date,
+                                                            "bake_date": props.bake_date,
+                                                            "dried_date": props.dried_date,
+                                                            "make_date": props.make_date,
+                                                            "dropoff_location": props.dropoff_location});
+    {/* below? */}
+    const [showEditBox, setShowEditBox] = useState(false) 
 
     const editButtonClick = () => {
         setShowEditBox(!showEditBox);
     }
-
-    const upvoteClick = () => {
-        const selectedCardId = props.id
-        props.upvoteCard(selectedCardId);
+    {/* reference to func that's built and run in (group proj) App.js */}
+    const upCountClick = () => {
+        const selectedOfferingId = props.id
+        props.upCountOffering(selectedOfferingId);
 
     };
 
-    const deleteCardClick = () => {
-        const selectedCardId = props.id
-        props.deleteCard(selectedCardId)
+    const deleteOfferingClick = () => {
+        const selectedOfferingId = props.id
+        props.deleteOffering(selectedOfferingId)
     };
 
-    const onMessageChange = (message) => {
-        setNewMessage({
-            ...newMessage,
-            'message': message.target.value
+    const onDetailsChange = (name, total_inventory, usda_organic, usage_time_limit, side_effects, contribution_date, bake_date, dried_date, make_date, dropoff_location) => {
+        setNewOfferingDetails({
+            ...newOfferingDetails,
+            'name': name.target.value,
+            'total_inventory': total_inventory.target.value,
+            'usda_organic': usda_organic.target.value,
+            'usage_time_limit': usage_time_limit.target.value,
+            'side_effects': side_effects.target.value,
+            'contribution_date': contribution_date.target.value,
+            'bake_date': bake_date.target.value,
+            'dried_date': dried_date.target.value,
+            'make_date': make_date.target.value,
+            'dropoff_location': dropoff_location.target.value
         })
     }
-
-    const onSubmitMessage = () => {
-        props.editCard(props.id, newMessage);
+    {/* editOffering() is a func that's built and run in (group proj) App.js file */}
+    const onSubmitOfferingDetails = () => {
+        props.editOffering(props.id, newOfferingDetails);
         setShowEditBox(!showEditBox)
     };
 
@@ -44,14 +61,16 @@ const Offering = (props) => {
         <ul>
             <>
                 {showEditBox ? (
-                <>
-                    <textarea defaultValue={props.message} onChange={ onMessageChange }></textarea>
-                    <button onClick={() => onSubmitMessage(newMessage)}>Save</button>
+                <> {/* what should be in <textarea> and <li> default values?? surely not every field? */}
+                    <textarea defaultValue={props.name} onChange={ onDetailsChange }></textarea>
+                    <button onClick={() => onSubmitOfferingDetails(newOfferingDetails)}>Save</button>
                 </>
-                ) : <li className="card-message" >Message: { props.message }</li>}
+                ) : <li className="offering-details" >Offering: { props.name }</li>}
                 </>
-            <button className="stickybutton" type='button' onClick={upvoteClick}> Upvote:  {props.likesCount}</button>
-            <button className="stickybutton" type='button' onClick={deleteCardClick}>Delete</button>
+            {/* first button hooked up to total inventory... should be hooked to a quantity be attr (would have to create that db table) */}
+            <button className="stickybutton" type='button' onClick={upCountClick}> Up the batch count for order:  {props.total_inventory}</button>
+            <button className="stickybutton" type='button' onClick={deleteOfferingClick}>Delete</button>
+            {/* prob should be on some other page? or link to that page? */}
             <button className="stickybutton" type='button' onClick={editButtonClick}>Edit</button>
         </ul>
     </section>
@@ -60,16 +79,23 @@ const Offering = (props) => {
     )
 }
 
-export default Card;
+export default Offering;
 
-
-Card.propTypes = {
+Offering.propTypes = {
 id: PropTypes.number.isRequired,
-message: PropTypes.string.isRequired,
-likesCount: PropTypes.number.isRequired,
-boardId: PropTypes.number.isRequired,
-upvoteCard: PropTypes.func.isRequired,
-deleteCard: PropTypes.func.isRequired
+name: PropTypes.string.isRequired,
+total_inventory: PropTypes.number.isRequired,
+category_id: PropTypes.number.isRequired,
+usda_organic: PropTypes.bool.isRequired,
+usage_time_limit: PropTypes.string.isRequired,
+side_effects: PropTypes.string.isRequired,
+contribution_date: PropTypes.string.isRequired,
+bake_date: PropTypes.string.isRequired,
+make_date: PropTypes.string.isRequired,
+dropoff_location: PropTypes.string.isRequired,
+
+upCountOffering: PropTypes.func.isRequired,
+deleteOffering: PropTypes.func.isRequired
 
 }
 

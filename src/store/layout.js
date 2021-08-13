@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "../components/scrollToTop"; //////////////////////
 
-import { HomePage } from "../pages/home";
+import { Home  } from "../pages/home";
 import { Demo } from "../pages/demo";
 import { Login } from "../pages/login";
 import { Single } from "../pages/single";
@@ -12,7 +12,6 @@ import injectContext from "../store/appContext"; // means you don't have to keep
 
 import { Navbar } from "../components/navbar"; //////////////////////
 import { Footer } from "../components/footer"; //////////////////////
-//import CategoryList from "../components/CategoryList"
 import OfferingList from "../components/OfferingList"
 import Register from "../pages/register";
 
@@ -21,7 +20,8 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	
 	// routing through a FE menu, not routing to the BE API
-	const basename = process.env.PORT || 3000;
+	// const basename = process.env.PORT || 3000;
+	const basename = process.env.BASENAME || "";
 
 	return (
 		<div className="d-flex flex-column h-100">
@@ -38,12 +38,15 @@ const Layout = () => {
 							<Login />
 						</Route>
 						<Route exact path="/"> {/* " pba.com/ " */}
-							<HomePage />
+							<Home />
 						</Route>
 						
-						<Route exact path="/food-categories/<category_id>/offerings"> {/* HOW TO EQUIV ' ...com/food-categories/<category_id>/offerings ' ???? */}
-							<OfferingList />
+						{/* <Route exact path="/food-categories/:category_id/SHOWofferings"> 
+							<SHOWOfferingList />
 						</Route>
+						<Route exact path="/food-categories/:category_id/EDITofferings">
+							<EDITOfferingList />
+						</Route> */}
 
 
 
@@ -53,9 +56,9 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
-						<Route>
+						{/* <Route>
 							<h1>Not found!</h1>
-						</Route>
+						</Route> */}
 					</Switch>
 					<Footer />
 				</ScrollToTop>

@@ -29,7 +29,7 @@ const injectContext = PassedComponent => {
 			 * store, instead use actions, like this:
 			 **/
 			state.actions.syncTokenFromSessionStore(); // <-- LC add for login
-			state.actions.syncUserFromSessionStore(); // <-- copying above line. can these both be here?
+			//state.actions.syncUserFromSessionStore(); // <-- copying above line. necessary?
 		}); // there was a bracket here
 
 		// The initial value for the context is not null anymore, but the current state of this component,

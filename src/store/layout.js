@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "../components/scrollToTop"; //////////////////////
 
-import { Home } from "../pages/home";
+import { HomePage } from "../pages/home";
 import { Demo } from "../pages/demo";
 import { Login } from "../pages/login";
 import { Single } from "../pages/single";
@@ -21,7 +21,7 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	
 	// routing through a FE menu, not routing to the BE API
-	const basename = process.env.BASENAME || "";
+	const basename = process.env.PORT || 3000;
 
 	return (
 		<div className="d-flex flex-column h-100">
@@ -38,7 +38,7 @@ const Layout = () => {
 							<Login />
 						</Route>
 						<Route exact path="/"> {/* " pba.com/ " */}
-							<Home />
+							<HomePage />
 						</Route>
 						
 						<Route exact path="/food-categories/<category_id>/offerings"> {/* HOW TO EQUIV ' ...com/food-categories/<category_id>/offerings ' ???? */}

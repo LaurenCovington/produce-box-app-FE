@@ -11,3 +11,7 @@ https://produce-box-app.herokuapp.com/
 # LAYOUT COMPONENT MUST BE INSIDE APP.JS FOR APP TO LAUNCH
 # LOAD OTHER COMPONENTS TO LAYOUT.JS ACC TO WHICH PAGE THEYRE SUPPOSED TO BE ON FOR USER, THOUGH.
 # CONCLU: PBA COMPONENTS GO TO LAYOUT.JS, <LAYOUT /> STAYS IN APP.JS FOR IT TO ALL WORK
+
+
+# added the fowlling to package_json - 8.12.21
+- "proxy": "https://produce-box-app.herokuapp.com",

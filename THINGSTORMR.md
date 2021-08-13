@@ -13,5 +13,5 @@ https://produce-box-app.herokuapp.com/
 # CONCLU: PBA COMPONENTS GO TO LAYOUT.JS, <LAYOUT /> STAYS IN APP.JS FOR IT TO ALL WORK
 
 
-# added the fowlling to package_json - 8.12.21
+# added the following to package_json, beneath "private" key - 8.12.21
 - "proxy": "https://produce-box-app.herokuapp.com",

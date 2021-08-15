@@ -172,20 +172,20 @@ const NewUserForm = (props) => {
             </div>
 
             <div>
-                {/* <label>User Type</label> 
+                <label>User Type</label> 
                 <input
                     value={userForm.user_type}
                     onChange={ onUserTypeChange }
                     className={(userForm.user_type.length === 0) || (userForm.user_type.length > 20)? 'invalid-form-input' : ''}
-                /> */}
+                />
 
-                <label>User Type</label>
+                {/* <label>User Type</label>
                         <select onChange={ onUserTypeChange } defaultValue="Select User Type"> 
                             <option defaultValue>Select User Type</option>
                             <option value="farmer">Farmer</option>
                             <option value="community member">Community Resident</option>
                             <option value="NPO rep">NPO Rep</option>
-                        </select><br />
+                        </select><br /> */}
             </div>
 
             <div> {/* check className logic */}

@@ -60,7 +60,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							alert("There's an error caught from flux.js - 1st");
 							return false;
 						}
-					
+						console.log("whats in response?: ", response)
 						const data = response.json();
 						console.log("this came from log backend: ", data);
 						sessionStorage.setItem("token", data.access_token);
@@ -69,7 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}).catch((error) => console.error("There's been an error in login",  error));
 				},
 			/* registration actions to be built here */
-			register: async (name, email, password, user_type, address, phone, contribution_dropoff, donations_sent, donations_received, organization, delivery_count) => {
+			register: async (name, email, password, user_type, username, address, phone, contribution_dropoff, donations_sent, donations_received, organization, delivery_count) => {
 				const opts = {
 					method: 'POST',
 					headers: {
@@ -80,6 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"email": email,
 						"password": password,
 						"user_type": user_type,
+						"username": username,
 						"address": address,
 						"phone": phone,
 						"contribution_dropoff": contribution_dropoff,
@@ -95,6 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"email": email,
 						"password": password,
 						"user_type": user_type,
+						"username": username,
 						"address": address,
 						"phone": phone,
 						"contribution_dropoff": contribution_dropoff,

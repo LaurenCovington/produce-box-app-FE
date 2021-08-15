@@ -6,7 +6,6 @@ import './Category.css';
 
 
 const Category = (props) => {
-
     const deleteCategoryClick = () => {
         const selectedCategoryId = props.id // right values? 
         props.deleteCategory(selectedCategoryId)
@@ -15,7 +14,7 @@ const Category = (props) => {
     return (
         
             <div> {/* add '...,food:props.associated_foods' to the end? */}
-                <button className="categorybutton" onClick={() => props.onCategorySelect({id:props.id,title:props.title})}> {/* right values? */}
+                <button className="categorybutton" onClick={() => props.onCategorySelect({id:props.id,title:props.title})}>
                     {props.title} {/* category title will display from here */}
                 </button>
                 <button className="deletebutton" onClick={deleteCategoryClick} >Delete Category</button>

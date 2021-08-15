@@ -42,9 +42,10 @@ export const Register = () => {
                 { (store.user && store.user !== "" && store.user !== undefined) ? "Welcome, " + store.user : 
                 
                 <div>
-                    <input type="text" placeholder="name" value={name} onChange={(e) => setName(e.target.value)}/>
+                    <input type="text" placeholder="preferred name" value={name} onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <input type="text" placeholder="user type" value={user_type} onChange={(e) => setUserType(e.target.value)}/>
+                    <input type="text" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)}/>
                     <input type="text" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <input type="text" placeholder="address" value={address} onChange={(e) => setAddress(e.target.value)}/>
                     <input type="text" placeholder="phone" value={phone} onChange={(e) => setPhone(e.target.value)}/>

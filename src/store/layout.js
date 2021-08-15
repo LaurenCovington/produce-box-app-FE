@@ -12,6 +12,7 @@ import injectContext from "../store/appContext"; // means you don't have to keep
 
 import { Navbar } from "../components/navbar"; //////////////////////
 import { Footer } from "../components/footer"; //////////////////////
+import Category from "../components/Category"
 import OfferingList from "../components/OfferingList"
 import Register from "../pages/register";
 
@@ -40,6 +41,24 @@ const Layout = () => {
 						<Route exact path="/"> {/* " pba.com/ " */}
 							<Home />
 						</Route>
+						<Route exact path="/category">
+							<Category />
+						</Route>
+						{/* <Route>
+							<SHOWCategoryList />
+						</Route>
+						<Route>
+							<EDITCategoryList />
+						</Route>
+						<Route>
+							<SHOWOfferingList />
+						</Route>
+						<Route>
+							<EDITOfferingList />
+						</Route>
+						<Route>
+							<SHOWOrderList />
+						</Route> */}
 						
 						{/* <Route exact path="/food-categories/:category_id/SHOWofferings"> 
 							<SHOWOfferingList />

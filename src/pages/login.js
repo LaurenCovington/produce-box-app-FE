@@ -24,7 +24,7 @@ function Login(props) {
             "email":state.email,
             "password":state.password,
         }
-        axios.post('localhost:5000/token', payload)
+        axios.post('http://localhost:5000/token', payload)
             .then(function (response) {
                 if(response.status === 200){
                     setState(prevState => ({

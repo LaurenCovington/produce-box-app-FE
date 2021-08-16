@@ -17,8 +17,8 @@ export const About = () => {
 		<div className="text-center mt-5">
 
 			<nav id="navbar">
-				<a href="localhost:3000/offerings">Get A Sense of What's Offered</a>
-				<a href="localhost:3000/farmers">See Some of Our Donors!</a>
+				<a href="http://localhost:3000/offerings">Get A Sense of What's Offered</a>
+				<a href="http://localhost:3000/farmers">See Some of Our Donors!</a>
         	</nav>
 
             <h1 className='about-title'> Welcome! </h1>
@@ -50,7 +50,9 @@ export const About = () => {
 				</BrowserRouter>
                 
             </p>
-			<p><Footer /></p>
+
+			<Footer />
+			
 		</div>
 	);
 };

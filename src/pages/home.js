@@ -21,6 +21,7 @@ export const Home = () => {
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/food-categories`).then((response) => {
             setCategoriesData(response.data);
+            console.log('get request FE INCOMING RESPONSE: ', response)
         }).catch((error) => {
             console.log("Error getting categories: ", error.message)
         })}, []);
@@ -32,7 +33,7 @@ export const Home = () => {
             const newCategories = [...categoriesData]
             newCategories.push(response.data.category);
             setCategoriesData(newCategories);
-            console.log('FE INCOMING RESPONSE: ', response)
+            console.log('post request FE INCOMING RESPONSE: ', response)
         }).catch((error) => {
             console.log('Error creating a category:', error);
             alert('Couldn\'t create a new category.');
@@ -136,16 +137,15 @@ export const Home = () => {
                 .get(`${process.env.REACT_APP_BACKEND_URL}/food-categories`)
                 .then((response) => {
                     setCategoriesData(response.data)
-                    setOfferingsData([])
+                    setOfferingsData([])})
                 .catch((error) => {
                 console.log("Problem deleteing category-upper", error)
                 })
             })
             .catch((error) => {
-                console.log("Problem deleteing category-upper", error)
+                console.log("Problem deleteing category-lower", error)
             })
-            })
-            };
+            }
 
     const [showCategoryForm, setShowCategoryForm] = useState(true)
 
@@ -212,8 +212,8 @@ export const Home = () => {
 					<Link to="/login">Logout</Link>
 				</BrowserRouter>
             </p>
-
-			<p><Footer /></p>
+            
+            <Footer />
         </div>
 );			
 };

@@ -12,6 +12,7 @@ const NewOfferingForm = (props) => {
     const [offeringForm, setOfferingForm] = useState({
         name: '',
         total_inventory: 0, 
+        expiration_date: '',
         usda_organic: false,
         usage_time_limit: '',
         side_effects: '',
@@ -64,6 +65,13 @@ const NewOfferingForm = (props) => {
         })
     }
 
+    const onExpirationDateChange = (event) => {
+        setOfferingForm({
+            ...offeringForm,
+            expiration_date: event.target.value
+        })
+    }
+
     const onBakeDateChange = (event) => {
         setOfferingForm({
             ...offeringForm,
@@ -102,6 +110,7 @@ const NewOfferingForm = (props) => {
             usage_time_limit: offeringForm.usage_time_limit,
             side_effects: offeringForm.side_effects,
             contribution_date: offeringForm.contribution_date,
+            expiration_date: offeringForm.expiration_date,
             bake_date: offeringForm.bake_date,
             dried_date: offeringForm.dried_date,
             make_date: offeringForm.make_date,
@@ -115,6 +124,7 @@ const NewOfferingForm = (props) => {
             usage_time_limit: '',
             side_effects: '',
             contribution_date: 'NOW',
+            expiration_date: '',
             bake_date: '',
             dried_date: '',
             make_date: '',
@@ -126,7 +136,7 @@ const NewOfferingForm = (props) => {
         <form onSubmit={onFormSubmit}>
             <div>
                 <label>Offering Name</label> 
-                <input
+                <input placeholder="Name of donation"
                     value={offeringForm.name}
                     onChange={ onNameChange }
                     className={(offeringForm.name.length === 0) || (offeringForm.name.length > 30)? 'invalid-form-input' : ''}
@@ -135,7 +145,7 @@ const NewOfferingForm = (props) => {
 
             <div> {/* className logic needs to be condensed; get out of ternary syntax */}
                 <label>Total Inventory</label> 
-                <input
+                <input placeholder="Digits, please!"
                     value={offeringForm.total_inventory}
                     onChange={ onInventoryChange }
                     className={(offeringForm.total_inventory < 0) || (offeringForm.total_inventory === 0)? 'invalid-form-input' : ''}
@@ -144,7 +154,7 @@ const NewOfferingForm = (props) => {
 
             <div> {/* check className logic */}
                 <label>USDA Organic?</label> 
-                <input
+                <input placeholder="Enter 'true' or 'false'"
                     value={offeringForm.usda_organic}
                     onChange={ onOrganicStatusChange }
                     className={(offeringForm.usda_organic !== false) || (offeringForm.usda_organic !== true)? 'invalid-form-input' : ''}
@@ -152,8 +162,8 @@ const NewOfferingForm = (props) => {
             </div>
 
             <div> {/* check className logic, nullables? */}
-                <label>Usage Time Limit - in weeks</label> 
-                <input
+                <label>Usage Time Limit</label> 
+                <input placeholder="In weeks"
                     value={offeringForm.usage_time_limit}
                     onChange={ onUseTimeLimChange }
                     className={(offeringForm.usage_time_limit.length === 0) || (offeringForm.usage_time_limit.length > 50)? 'invalid-form-input' : ''}
@@ -162,7 +172,7 @@ const NewOfferingForm = (props) => {
 
             <div> {/* check disable logic given nullables? */}
                 <label>Side Effects - if any</label> 
-                <input
+                <input placeholder="Enter 'N/A' if needed"
                     value={offeringForm.side_effects}
                     onChange={ onSideEffectsChange }
                     // className={(offeringForm.side_effects.length < 0) || (offeringForm.usage_time_limit.length > 100)? 'invalid-form-input' : ''}
@@ -171,15 +181,23 @@ const NewOfferingForm = (props) => {
 
             <div> {/* how to do default=now here?; any 'disable' logic to add here? */}
                 <label>Contribution Date</label> 
-                <input
+                <input placeholder="YYYY-MM-DD"
                     value={offeringForm.contribution_date}
                     onChange={ onContribDateChange}
                 />
             </div>
 
+            <div> {/* how to do default=now here?; any 'disable' logic to add here? */}
+                <label>Expiration Date</label> 
+                <input placeholder="YYYY-MM-DD"
+                    value={offeringForm.expiration_date}
+                    onChange={ onExpirationDateChange}
+                />
+            </div>
+
             <div> {/* nullables?, disable logic given nullables? */}
                 <label>Bake Date - if any</label> 
-                <input
+                <input placeholder="YYYY-MM-DD"
                     value={offeringForm.bake_date}
                     onChange={ onBakeDateChange }
                     //className={(offeringForm.bake_date.length < 0) || (offeringForm.usage_time_limit.length > 100)? 'invalid-form-input' : ''}
@@ -188,7 +206,7 @@ const NewOfferingForm = (props) => {
 
             <div> {/* nullables?, disable logic given nullables? */}
                 <label>Dried Date - if any</label> 
-                <input
+                <input placeholder="YYYY-MM-DD"
                     value={offeringForm.dried_date}
                     onChange={ onDriedDateChange }
                     //className={(offeringForm.bake_date.length < 0) || (offeringForm.usage_time_limit.length > 100)? 'invalid-form-input' : ''}
@@ -197,7 +215,7 @@ const NewOfferingForm = (props) => {
 
             <div> {/* nullables?, disable logic given nullables? */}
                 <label>Make Date - if any</label> 
-                <input
+                <input placeholder="YYYY-MM-DD"
                     value={offeringForm.make_date}
                     onChange={ onMakeDateChange }
                     //className={(offeringForm.bake_date.length < 0) || (offeringForm.usage_time_limit.length > 100)? 'invalid-form-input' : ''}
@@ -206,7 +224,7 @@ const NewOfferingForm = (props) => {
 
             <div> {/* nullables?, disable logic given nullables? */}
                 <label>Drop-Off Location</label> 
-                <input
+                <input placeholder="Address given by NPO"
                     value={offeringForm.dropoff_location}
                     onChange={ onDropLocChange }
                     className={(offeringForm.dropoff_location.length === 0) || (offeringForm.usage_time_limit.length > 100)? 'invalid-form-input' : ''}

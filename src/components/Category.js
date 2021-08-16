@@ -14,7 +14,7 @@ const Category = (props) => {
     return (
         <div> 
             <button className="categorybutton" onClick={() => props.onCategorySelect({id:props.id, category_title:props.category_title})}>
-                Category: { props.category_title }
+                { props.category_title }
             </button>
             <button className="deletebutton" onClick={deleteCategoryClick} >Delete Category</button>
         </div>

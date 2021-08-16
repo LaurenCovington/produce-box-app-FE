@@ -14,8 +14,8 @@ export const LandingPage = () => {
 	return (
 		<div className="text-center mt-5">
 			<nav id="navbar">
-				<a href="localhost:3000/about">What We Do and Why</a>
-				<a href="localhost:3000/displayofferings">Check Out Our Set-Up</a>
+				<a href="http://localhost:3000/about">What We Do and Why</a>
+				<a href="http://localhost:3000/displayofferings">Check Out Our Set-Up</a>
         	</nav>
 
 			<h1>Welcome, User!</h1>
@@ -40,7 +40,9 @@ export const LandingPage = () => {
 					Code Housed Here 
 				</a>
 			</p>
-			<p><Footer /></p>
+			
+			<Footer />
+			
 		</div>
 	);
 };

@@ -7,18 +7,17 @@ import './Category.css';
 
 const Category = (props) => {
     const deleteCategoryClick = () => {
-        const selectedCategoryId = props.id // right values? 
+        const selectedCategoryId = props.id
         props.deleteCategory(selectedCategoryId)
     };
 
     return (
-        
-            <div> {/* add '...,food:props.associated_foods' to the end? */}
-                <button className="categorybutton" onClick={() => props.onCategorySelect({id:props.id,title:props.title})}>
-                    {props.title} {/* category title will display from here */}
-                </button>
-                <button className="deletebutton" onClick={deleteCategoryClick} >Delete Category</button>
-            </div>
+        <div> 
+            <button className="categorybutton" onClick={() => props.onCategorySelect({id:props.id, category_title:props.category_title})}>
+                Category: { props.category_title }
+            </button>
+            <button className="deletebutton" onClick={deleteCategoryClick} >Delete Category</button>
+        </div>
     
     );
     
@@ -29,7 +28,7 @@ export default Category;
 
 Category.propTypes = {
     id: PropTypes.number.isRequired, 
-    title: PropTypes.string.isRequired, 
+    category_title: PropTypes.string.isRequired, 
     onCategorySelect: PropTypes.func.isRequired
 
 }

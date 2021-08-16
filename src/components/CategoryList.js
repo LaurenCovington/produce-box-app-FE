@@ -6,13 +6,12 @@ import './CategoryList.css';
 
 const CategoryList = (props) => { 
     
-    const listofCategories = props.categoriesData.map((category) => { // line 29
+    const listofCategories = props.categoriesData.map((category) => {
         return (
             <Category 
-            key= {category.id} // own names or BE attr names?
-            title= {category.title}
+            key= {category.id} 
+            category_title= {category.category_title}
             id= {category.id} // in template 2x
-            // foods = {category.associated_foods} >>>>>> no need!
             onCategorySelect= {props.selectedCategory}
             deleteCategory= {props.deleteCategory}
             />
@@ -26,10 +25,8 @@ export default CategoryList;
 // enforce existence and proper data types
 CategoryList.propTypes = {
     categoriesData: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string.isRequired,
+        category_title: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired
-        // foods: PropTypes.number.isRequired >> ???
-        
     })),
     deleteCategory: PropTypes.func.isRequired,
     selectedCategory: PropTypes.func.isRequired

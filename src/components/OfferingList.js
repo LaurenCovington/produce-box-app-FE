@@ -11,7 +11,7 @@ const OfferingList = (props) => {
         return (
             <Offering 
             key= {offering.id} // own names or BE attr names?
-            title= {offering.title}
+            name= {offering.name}
             id= {offering.id} // in group proj template 2x
             onOfferingSelect= {props.selectedOffering}
             deleteOffering= {props.deleteOffering}

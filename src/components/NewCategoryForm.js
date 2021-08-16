@@ -9,13 +9,13 @@ import PropTypes from 'prop-types';
 // /* confirm: no id after line 11?;;; whate are ... inside onTitleChange? */
 const NewCategoryForm = (props) => {
     const [categoryForm, setCategoryForm] = useState({
-        title: ''
+        category_title: ''
     });
     
     const onTitleChange = (event) => {
         setCategoryForm({
             ...categoryForm,
-            title: event.target.value
+            category_title: event.target.value
         })
     }
 
@@ -23,11 +23,11 @@ const NewCategoryForm = (props) => {
         event.preventDefault();
 
         props.createNewCategory({
-            title: categoryForm.title
+            category_title: categoryForm.category_title
         })
 
         setCategoryForm({
-            title: ''
+            category_title: ''
         })
     }
 
@@ -37,16 +37,16 @@ const NewCategoryForm = (props) => {
                 <label>Title</label> 
                 <input
                     placeholder="Category Name"
-                    value={categoryForm.title}
+                    value={categoryForm.category_title}
                     onChange={ onTitleChange }
-                    className={(categoryForm.title.length === 0)? 'invalid-form-input' : ''}
+                    className={(categoryForm.category_title.length === 0)? 'invalid-form-input' : ''}
                 />
             </div>
 
             <input className='submit-prompt'
                 type="submit"
                 value="Submit Category"
-                disabled={((categoryForm.title.length === 0) || (categoryForm.owner.length === 0))}
+                disabled={(categoryForm.category_title.length === 0)}
             />
         </form>
     );

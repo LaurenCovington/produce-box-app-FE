@@ -10,7 +10,7 @@ const Offering = (props) => {
                                                             "total_inventory": props.total_inventory,
                                                             "usda_organic": props.usda_organic,
                                                             "usage_time_limit": props.usage_time_limit,
-                                                            "side_effects": props.side_effect,
+                                                            "side_effects": props.side_effects,
                                                             "contribution_date": props.contribution_date,
                                                             "bake_date": props.bake_date,
                                                             "dried_date": props.dried_date,

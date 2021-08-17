@@ -17,6 +17,7 @@ function App() {
   const routes = {
     '/': () => <LandingPage />,
     '/register': () => <Register />,
+    // '/login': () => <Login />,   >>>> it was supposed to be here but it never worked
     '/about': () => <About />,
     '/home': () => <Home />,
     '/categories': () => <CategoryList />,

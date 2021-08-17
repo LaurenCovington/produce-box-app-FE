@@ -11,7 +11,7 @@ import Category from "../components/Category";
 //import "../../styles/home.scss";
 
 export const ShowOfferings = () => {
-	const { store, actions } = useContext(Context);
+	//const { store, actions } = useContext(Context);
 // WILL CATEGORY.CATEGORY_TITLE WORK OR JUST LIST A CAT NAME FOR DEMO?
 	return (
 		<div className="text-center mt-5">
@@ -37,7 +37,7 @@ export const ShowOfferings = () => {
 			<p className='welcomepage-photo'>
 				<img src='https://images.unsplash.com/photo-1486328228599-85db4443971f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80' alt='Greenhouse with fruiting tomato plants pictured' />
 			</p>
-			<div className="alert alert-info">{store.message || "Loading message from the backend..."}</div> {/* message is in flux.js, part of tut */}
+			{/* <div className="alert alert-info">{store.message || "Loading message from the backend..."}</div>  >>>>> message is in flux.js, part of tut */}
 			<p>
 				<a href="https://github.com/LaurenCovington/">
 					Code Housed Here 

@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 // sign up page, template from login.js
 export const Register = () => {
-	const { store, actions } = useContext(Context);
+	//const { store, actions } = useContext(Context);
 
     const [ name, setName ] = useState(""); 
     const [ email, setEmail ] = useState("");
@@ -29,8 +29,9 @@ export const Register = () => {
     // validation: add logic to decline email's already in the db -- hit BE create_user() 
 
     const handleClick = () => {
-        actions.register(name, email, user_type, username, password, address, phone,
-            contribution_dropoff, donations_sent, donations_received, organization, delivery_count)
+        // commented out at8.16.21, 4:51pm bc it never worked and i'm pulling context from another tutorial
+        //actions.register(name, email, user_type, username, password, address, phone,
+          //  contribution_dropoff, donations_sent, donations_received, organization, delivery_count)
     };
 
     //if(store.user && store.user !== "" && store.user !== undefined) history.push("/login"); // if user's not there, push to login page
@@ -39,6 +40,7 @@ export const Register = () => {
 
 		<div className="text-center mt-5">
 			<h1>Register Here</h1>
+            {/* see line 32 for why commented out. renders just the same for presentation! */}
                 {/* { (store.user && store.user !== "" && store.user !== undefined) ? "Welcome, " + store.user :  */}
                 
                 <div>

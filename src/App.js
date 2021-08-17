@@ -1,27 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { lazy, useState, useEffect, Suspense } from 'react';
 import { BrowserRouter, Router, Route, Switch, Link } from "react-router-dom";
 import axios from 'axios';
-import Login from './pages/login';
-
-// initial
-import LandingPage from './pages/landingpage';
-import Register from './pages/register';
-import About from './pages/about';
-import Home from './pages/home';
-// import CategoryList from './components/CategoryList';
-// import OfferingList from './components/OfferingList';
-// adds
-import Cart from './components/Cart';
-import OfferingDetails from './components/OfferingDetails';
-import OrderSummary from './components/OrderSummary';
-import PretendFarmer from './pages/pretendfarmer';
-import PretendCommres from './pages/pretendcommres';
-//import ShowOfferings from './components/ShowOfferings';
-
-// router workaround
 import {useRoutes} from 'hookrouter';
 import './App.css';
-import Products from './components/Products';
+
+//import Login from './pages/login';
+const Login = lazy(() => import('./pages/login'));
+
+//import LandingPage from './pages/landingpage';
+const LandingPage = lazy(() => import('./pages/landingpage'));
+
+//import Register from './pages/register';
+const Register = lazy(() => import('./pages/register'));
+
+//import About from './pages/about';
+const About = lazy(() => import('./pages/about'));
+
+//import Home from './pages/home';
+const Home = lazy(() => import('./pages/home'));
+
+//import Cart from './components/Cart';
+const Cart = lazy(() => import('./components/Cart'));
+
+//import OfferingDetails from './components/OfferingDetails';
+const OfferingDetails = lazy(() => import('./components/OfferingDetails'));
+
+//import OrderSummary from './components/OrderSummary';
+const OrderSummary = lazy(() => import('./components/OrderSummary'));
+
+//import PretendFarmer from './pages/pretendfarmer';
+const PretendFarmer = lazy(() => import('./pages/pretendfarmer'));
+
+//import Products from './components/Products';
+const Products = lazy(() => import('./components/Products'));
+
+
 
 function App() {
 

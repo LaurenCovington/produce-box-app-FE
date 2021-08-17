@@ -160,13 +160,13 @@ export const Home = () => {
             <div>
             <h1 className='homepage-title'> Welcome! </h1>
                 <h2>Let's See What Seattle Growers Have to Offer: </h2>
-                <button className="change-city" >Change City</button> 
+                {/* <button className="change-city" >Change City</button>  */}
             </div>
-
-            <section className='flex-container-wrap'>
+            {/* below moved to pretendfarmer.js for vid walkthrough */}
+            {/* <section className='flex-container-wrap'>
                 <h2>Create a New Category</h2>
                 {showCategoryForm ? <NewCategoryForm createNewCategory={ createNewCategory }/> : '' }
-            </section>
+            </section> */}
 
             {/* MOVED TO PRETENDFARMER.JS
             

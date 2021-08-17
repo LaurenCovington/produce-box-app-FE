@@ -1,10 +1,5 @@
-// on mine, create offering batches to show to '/offerings' page!
-// get rid of price!!! it's in cart.js, appContext.js, data.js, details.js, product.js
-// on mine, create offering batches to show to '/offerings' page!
-
-// how to get imgs to work?? img attr used in cart.js around line 53
-    // putting a link like the first img in the <img src=...> means all foods in the cart have the same pic
-    // unique pics must be saved to an imgs folder and ref'd here ...
+// carrot price = $4/lb
+// 
 // btw:count is how many you want; not total inventory
 export const Data=[
 
@@ -22,7 +17,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'100',
+        price:'4',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -32,7 +27,7 @@ export const Data=[
     {
         id:2,
         img:'https://images.unsplash.com/photo-1600398811198-f11d97598a46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80',
-        name:'Kale Bunch',
+        name:'Kale Bunches',
         total_inventory: 20,
         usda_organic: 'False',
         usage_time_limit: 1,
@@ -43,7 +38,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'12',
+        price:'3',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -64,7 +59,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'65',
+        price:'3',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -85,7 +80,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'13',
+        price:'2.50',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -106,7 +101,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'45',
+        price:'1.65',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -127,7 +122,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'67',
+        price:'3.50',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -147,7 +142,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'23',
+        price:'5',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false
@@ -167,7 +162,7 @@ export const Data=[
         dried_date: 'N/A',
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
-        price:'15',
+        price:'1.50',
         details:'Harvested from the McDowell Family Farm in Washington State!',
         count:1,
         isInCart:false

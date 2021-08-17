@@ -80,18 +80,18 @@ export default function Cart(props) {
             <h3><span> Amount Saved:</span> ${total}</h3>
 
         <div className="shipping">
-            <h3><span>Shipping Costs: </span>{total >90?'free':
+            <h3><span>Delivery Costs Saved: </span>{total > 90? 'free':
             
-            `+$${shipping}`}
+            `$${shipping}`}
             
             </h3> 
         </div>
 
         <h3 ><span> Total Amount Saved:</span>
-        ${total>90 ?total:total+shipping}</h3>
+        ${total>90 ?total:total + shipping}</h3>
 
         <div className="payment" onClick={closeNavCart}>
-                <a href='/order'>See Order Summary</a>
+                <a href='/order'>Confirm Delivery Info</a>
         </div>
 
     </div>

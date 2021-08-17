@@ -163,6 +163,15 @@ export const PretendFarmer = () => {
 
 			<h2>Here's How They Share Their Contributions</h2>
 			<br />
+            <br />
+            <h3>Different regions yield different types of foods. Farmers can create categories according to what they can offer.</h3>
+            <br />
+            <section className='flex-container-wrap'>
+                <h2>Create a New Category</h2>
+                {showCategoryForm ? <NewCategoryForm createNewCategory={ createNewCategory }/> : '' }
+            </section>
+            <br />
+
             <section className='choose-category-prompt'>
                 <h2>Choose An Offering Category</h2> 
                     < CategoryList 
@@ -183,7 +192,7 @@ export const PretendFarmer = () => {
                     />
             </section>
 
-            <section className='create-category-prompt'> 
+            <section className='create-offering'> 
                 {selectedCategory.id !== null ? 
                     <>
                     <h3>Post A New Offering</h3> 
@@ -192,11 +201,10 @@ export const PretendFarmer = () => {
                     : ''
                 }
             </section>
-			<br />
-			<br />
-
+			
+            <br />
 			<h2>
-				<a href='/demoofferingview'><button className="walkthrough-button">Continue to See What Our Community Residents Choose From</button></a> 
+				<a href='/demoofferingview'><button className="walkthrough-button">Submit the Posting to See What Our Community Residents Choose From</button></a> 
 			</h2>
 
 			<p className='welcomepage-photo'>

@@ -36,7 +36,6 @@ function App() {
 
     '/demofarmerview': () => <PretendFarmer />,
     '/demoofferingview': () => <Products />,
-    //'/pretend-nporep': () => <PretendNPO />,  >>>> taken care of w /order below (cart button sends us there)
 
     '/details/:id': () => <OfferingDetails />, // not ready yet
     '/order': () => <OrderSummary />, // not ready yet

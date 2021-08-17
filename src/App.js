@@ -18,10 +18,12 @@ import Cart from './components/Cart';
 import OfferingDetails from './components/OfferingDetails';
 //import Payment from './components/Payment'; // maybe replace w Summary?
 import ShowOfferings from './components/ShowOfferings';
+import OrderSummary from './components/OrderSummary';
 
 // router workaround
 import {useRoutes} from 'hookrouter';
 import './App.css';
+import Products from './components/Products';
 
 function App() {
 
@@ -32,9 +34,11 @@ function App() {
     // '/login': () => <Login />,   >>>> it was supposed to be here but it never worked
     '/about': () => <About />,
     '/home': () => <Home />,
-    '/showOfferings': () => <ShowOfferings />,
-    '/details/:id': () => <OfferingDetails />,
-    
+    '/showOfferings': () => <Products />,
+    // '/showOfferings': () => <ShowOfferings />,
+    '/details/:id': () => <OfferingDetails />, // not ready yet
+    '/order': () => <OrderSummary />,
+
     //'/categories': () => <CategoryList />,    >>>> arent these showing on home page already?
     '/offerings': ({id}) => <OfferingList />, // why is {id} in there? typo?
   

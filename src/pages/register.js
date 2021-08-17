@@ -39,6 +39,12 @@ export const Register = () => {
 	return (
 
 		<div className="text-center mt-5">
+
+            <nav id="navbar">
+				<a href="http://localhost:3000/about">What We Do and Why</a>
+				<a href="http://localhost:3000/displayofferings">Check Out Our Set-Up</a>
+            </nav>
+
 			<h1>Register Here</h1>
             {/* see line 32 for why commented out. renders just the same for presentation! */}
                 {/* { (store.user && store.user !== "" && store.user !== undefined) ? "Welcome, " + store.user :  */}

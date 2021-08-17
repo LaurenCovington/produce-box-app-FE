@@ -21,7 +21,6 @@ import {Link} from 'react-router-dom';
 
 // Payment link and comp need to be like 'order review or smthg w the delivery address, contact info and pic of deliverer, if possible
 
-
 export default function Cart(props) {
     const { cartOpen,
             closeNavCart,
@@ -51,34 +50,31 @@ export default function Cart(props) {
             return(
             <div className="cart-center" key={product.id}>
             <div className="img-cart">
-                <img src={product.img} src={`/${product.img}`} alt=""/>
+                <img src={product.img} alt=""/> {/* was <img src={product.img} src={`/${product.img}`} alt=""/>*/}
             </div>
 
             <div className="item-cart">
-             <p>{product.title}</p>
-              </div>
-              <div className="inc-dec-cart">
+                <p>{product.name}</p>
+            </div>
+                <div className="inc-dec-cart">
                 <button onClick={()=>decreaseItem(product.id)}>-</button>
-                 {product.count}
+                    {product.count}
                 <button onClick={()=>increaseItem(product.id)}>+</button>
-                
-               
-              </div>
-              <div className="price-cart">
-             <p>$ {product.price*product.count}</p> 
-              </div>
+            </div>
+            <div className="price-cart">
+                <p>$ {product.price*product.count}</p> 
+            </div>
             <div className="del-item" onClick={()=>deleteItem(product.id)} >
             <i className="fa fa-trash" aria-hidden="true"></i>
-  
-  
+
             </div>
-      </div>
-             )
-         })}
-  
+    </div>
+            )
+})}
+
         {/* totals */}
-       <div className="extra-info">
-      <h3><span> amount :</span> ${total}</h3>
+        <div className="extra-info">
+            <h3><span> amount :</span> ${total}</h3>
 
         <div className="shipping">
             <h3><span>shipping: </span>{total >90?'free':
@@ -87,23 +83,20 @@ export default function Cart(props) {
             
             </h3> 
         </div>
- 
+
         <h3 ><span> Total amount :</span>
-         ${total>90 ?total:total+shipping}</h3>
-          
-           <div className="payment" onClick={closeNavCart}><Link to='/payment'>Payment</Link></div>
-  
-       </div>
-  
-          </div>
-          
-          
-          }
+        ${total>90 ?total:total+shipping}</h3>
 
+        <div className="was-payment" onClick={closeNavCart}>
+                <a href='/order'>See Order Summary</a>
+        </div>
 
-      
-       
-       </ul> 
+    </div>
+
+        </div>
+}
+
+    </ul> 
         )
     }}
 </ProductConsumer>

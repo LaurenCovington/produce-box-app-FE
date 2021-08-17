@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { Context } from "../store/appContext";
 import Footer from "../components/footer";
-import { Navbar } from "../components/navbar";
+import Navbar from "../components/navbar";
 import { BrowserRouter } from "react-router-dom";
 import CategoryList from "../components/CategoryList";
 import Category from "../components/Category";
@@ -156,6 +156,7 @@ export const Home = () => {
 
 	return (
         <div>
+            <Navbar />
             <div>
             <h1 className='homepage-title'> Welcome! </h1>
                 <h2>Let's See What Seattle Growers Have to Offer: </h2>

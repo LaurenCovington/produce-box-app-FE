@@ -6,17 +6,16 @@ import React, { useContext } from "react";
 import { BrowserRouter, Link } from 'react-router-dom';
 //import { Context } from "../store/appContext";
 import Footer from "../components/footer";
-import { Navbar } from "../components/navbar";
+import Navbar from "../components/navbar";
 //import "../../styles/home.scss";
 
 export const LandingPage = () => {
-
 	return (
 		<div className="text-center mt-5">
 			<nav id="navbar">
 				<a href="http://localhost:3000/about">What We Do and Why</a>
 				<a href="http://localhost:3000/displayofferings">Check Out Our Set-Up</a>
-        	</nav>
+            </nav>
 
 			<h1>Welcome, User!</h1>
 			<h2>Please register or log in to get started:</h2>

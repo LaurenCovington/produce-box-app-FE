@@ -231,12 +231,12 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            {/* what conditions should keep the submit button from working> add all conditions for 'disable-the-button' line */}
-            <input className='submitOffering'
+            {/* just go to the 'Continue Walkthrough' button */}
+            {/* <input className='submitOffering'
                 type="submit"
                 value="Post Offering Batch"
                 disabled={((offeringForm.name.length === 0) || (offeringForm.name.length > 30))}
-            />
+            /> */}
         </form>
     );
 };

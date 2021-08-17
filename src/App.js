@@ -8,17 +8,15 @@ import LandingPage from './pages/landingpage';
 import Register from './pages/register';
 import About from './pages/about';
 import Home from './pages/home';
-import CategoryList from './components/CategoryList';
-import OfferingList from './components/OfferingList';
-
+// import CategoryList from './components/CategoryList';
+// import OfferingList from './components/OfferingList';
 // adds
-//import Navbar from "./components/Navbar.js";
-//import Products from './components/Products'; // coming equivalent is OfferingList above; keeping here for reference
 import Cart from './components/Cart';
 import OfferingDetails from './components/OfferingDetails';
-//import Payment from './components/Payment'; // maybe replace w Summary?
-import ShowOfferings from './components/ShowOfferings';
 import OrderSummary from './components/OrderSummary';
+import PretendFarmer from './pages/pretendfarmer';
+import PretendCommres from './pages/pretendcommres';
+//import ShowOfferings from './components/ShowOfferings';
 
 // router workaround
 import {useRoutes} from 'hookrouter';
@@ -33,15 +31,16 @@ function App() {
     '/register': () => <Register />,
     // '/login': () => <Login />,   >>>> it was supposed to be here but it never worked
     '/about': () => <About />,
-    '/home': () => <Home />,
-    '/showOfferings': () => <Products />,
-    // '/showOfferings': () => <ShowOfferings />,
-    '/details/:id': () => <OfferingDetails />, // not ready yet
-    '/order': () => <OrderSummary />,
+    '/home': () => <Home />, // show <Products /> here? what exactly needs to be on home page at this point (12:26am, 8.17.21)
+    '/showOfferings': () => <Products />, // duped down below but not rebuilding offerings at this point...
 
+    '/demofarmerview': () => <PretendFarmer />,
+    '/demoofferingview': () => <Products />,
+    //'/pretend-nporep': () => <PretendNPO />,  >>>> taken care of w /order below (cart button sends us there)
+
+    '/details/:id': () => <OfferingDetails />, // not ready yet
+    '/order': () => <OrderSummary />, // not ready yet
     //'/categories': () => <CategoryList />,    >>>> arent these showing on home page already?
-    '/offerings': ({id}) => <OfferingList />, // why is {id} in there? typo?
-  
 };
 
   const routeResult = useRoutes(routes);
@@ -52,29 +51,6 @@ function App() {
 
   export default App;
 
-
-  // return (
-  //   <React.Fragment>
-  //     <Navbar />
-  //   <Router>
-  //   <Switch>
-  //     <Route exact path="/" component={LandingPage} />
-  //     <Route exact path="/register" component={Register} />
-  //     <Route exact path="/about" component={About} />
-  //     <Route exact path="/home" component={Home} />
-  //     <Route exact path="/categories" component={CategoryList} />
-  //     <Route exact path="/offerings" component={OfferingList} />
-
-  //     {/* <Route exact path="/payment" component={Payment} />
-  //     <Route exact path="/details/:id" component={Details} />  */}
-      
-  //   </Switch>
-  //   </Router>
-  //    {/* <Route exact path="/cart" component={Cart} /> */}
-    
-  //   </React.Fragment>
-  //     );
-  //   }
 
 
 

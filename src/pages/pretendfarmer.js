@@ -1,19 +1,20 @@
-import React, { useContext, useState, useEffect } from "react";
+// 'see how it works' button leads to this page/comp to show how farmer would post an offering (leave category alone on home)
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { Context } from "../store/appContext";
 import Footer from "../components/footer";
-import Navbar from "../components/navbar";
+import { Navbar } from "../components/navbar";
 import { BrowserRouter } from "react-router-dom";
+
 import CategoryList from "../components/CategoryList";
 import Category from "../components/Category";
 import OfferingList from "../components/OfferingList";
 import Offering from "../components/Offering";
 import NewCategoryForm from "../components/NewCategoryForm";
 import NewOfferingForm from "../components/NewOfferingForm";
-//import "../../styles/home.scss";
 
-export const Home = () => {
+export const PretendFarmer = () => {
     // behaviors to go w 'show-category.js'
     const [categoriesData, setCategoriesData] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState({'category_title': ''});
@@ -148,28 +149,20 @@ export const Home = () => {
             }
 
     const [showCategoryForm, setShowCategoryForm] = useState(true)
+	
+    return (
+		<div className="text-center mt-5">
 
-    // the below was for the 'Hide Me' button toggle
-    // const categoryFormClick = () => {
-    //         setShowCategoryForm(!showCategoryForm)
-    //     }
+			<nav id="navbar">
+				<a href="/">Join</a>
+				<a href="/farmers">See Some of Our Donors!</a>
+        	</nav>
 
-	return (
-        <div>
-            <Navbar />
-            <div>
-            <h1 className='homepage-title'> Welcome! </h1>
-                <h2>Let's See What Seattle Growers Have to Offer: </h2>
-                <button className="change-city" >Change City</button> 
-            </div>
+            <h1 className='walkthrough-title'> Our Farmers Agree To Contribute Portions of Their Harvests </h1>
+			<br />
 
-            <section className='flex-container-wrap'>
-                <h2>Create a New Category</h2>
-                {showCategoryForm ? <NewCategoryForm createNewCategory={ createNewCategory }/> : '' }
-            </section>
-
-            {/* MOVED TO PRETENDFARMER.JS
-            
+			<h2>Here's How They Share Their Contributions</h2>
+			<br />
             <section className='choose-category-prompt'>
                 <h2>Choose An Offering Category</h2> 
                     < CategoryList 
@@ -198,26 +191,34 @@ export const Home = () => {
                     </>
                     : ''
                 }
-            </section> */}
+            </section>
+			<br />
+			<br />
 
-            <p className='welcomepage-photo'>
-			    <img src='https://images.unsplash.com/photo-1486328228599-85db4443971f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80' alt='Greenhouse with fruiting tomato plants pictured' />
+			<h2>
+				<a href='/demoofferingview'><button className="walkthrough-button">Continue to See What Our Community Residents Choose From</button></a> 
+			</h2>
+
+			<p className='welcomepage-photo'>
+				<img src='https://images.unsplash.com/photo-1486328228599-85db4443971f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80' alt='Greenhouse with fruiting tomato plants pictured' />
 			</p>
 
-			<p>
+			<div>
 				<a href="https://github.com/LaurenCovington/">
 					Code Housed Here 
 				</a>
-			</p>
+			</div>
 
-			<p>
+			<div>
 				<BrowserRouter>
 					<Link to="/login">Logout</Link>
 				</BrowserRouter>
-            </p>
-            
-            <Footer />
-        </div>
-);			
+                
+            </div>
+
+			<Footer />
+			
+		</div>
+	);
 };
-export default Home;
+export default PretendFarmer;

@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-//import * as serviceWorker from './serviceWorker';      >>>>> add back (alongside last line) if doing service worker code
+import * as serviceWorker from './serviceWorker';
 import {ProductProvider} from './store/appContext'; // GET LOCATION
 import {BrowserRouter} from 'react-router-dom';
 
@@ -23,7 +23,7 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-//serviceWorker.unregister();
+serviceWorker.unregister();
 
 
 

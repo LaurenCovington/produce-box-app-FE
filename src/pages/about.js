@@ -1,7 +1,3 @@
-// home page: this is what users will see after logging in
-//import "../../styles/home.scss";
-// warning on 11???
-
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 import { Context } from "../store/appContext";
@@ -11,7 +7,6 @@ import { BrowserRouter } from "react-router-dom";
 //import "../../styles/home.scss";
 
 export const About = () => {
-	// const { store, actions } = useContext(Context);
 
 	return (
 		<div className="text-center mt-5">
@@ -34,6 +29,10 @@ export const About = () => {
                 to a city, and offer a 'connector' non-profit the final collection of info for each household: 
                 what and how much needs to be delivered and delivery address so that employees can deliver.</h2>
 			
+				<div className="towards-offerings">
+					<Link to='/offerings'><button className="to-offerings-button">See Offerings</button></Link>
+                </div>
+
 			<p className='welcomepage-photo'>
 				<img src='https://images.unsplash.com/photo-1486328228599-85db4443971f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80' alt='Greenhouse with fruiting tomato plants pictured' />
 			</p>

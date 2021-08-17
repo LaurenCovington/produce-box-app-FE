@@ -3,6 +3,7 @@
 import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+// add expiration date below! prevent offering post, i think
 
 /* LOGIC FROM GROUP PROJ BUT MAKE SURE EDITING OFFERINGS ISN'T POSSIBLE ON HOMEPAGE/FIGURE OUT WHERE TO PUT IT  */
 const Offering = (props) => {

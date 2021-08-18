@@ -43,6 +43,6 @@ OfferingList.propTypes = {
         
     })),
     deleteOffering: PropTypes.func.isRequired,
-    selectedOffering: PropTypes.func.isRequired
+    //selectedOffering: PropTypes.func.isRequired
 }
 

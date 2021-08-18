@@ -7,7 +7,7 @@ import Navbar from "../components/navbar";
 
 export const LandingPage = () => {
 	return (
-		<div className="text-center mt-5">
+		<div className="landingpage-login">
 			<Navbar />
 			<div className="start-buttons">
 				<a href="/login">Login</a>

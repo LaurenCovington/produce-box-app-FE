@@ -467,15 +467,22 @@ flex:0 0 calc(50% - 20px);
 
 
 /* product details info */
+
+.det {
+  background-color: #f2e8cf;
+}
 .det-center{
 box-shadow: 1px 1px 4px 1px gray;
+background-color: #faf6ed;
 }
 
-.det h2{
+/* 'offering details' */
+h2{
   text-align: center;
   margin:10px 0;
-  font-style: italic;
-  color: rgb(90, 90, 90);
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 30px;
   letter-spacing: 0.1rem;
 }
 
@@ -485,7 +492,7 @@ box-shadow: 1px 1px 4px 1px gray;
 
 .det-center .det-img img{
   display: block;
- 
+  height: 600px;
   margin:0 auto;
 }
 
@@ -499,19 +506,35 @@ box-shadow: 1px 1px 4px 1px gray;
 margin-bottom: 15px;
 }
 
+/* 'Kale Bunches' */
 .det-info h3{
 text-align: center;
 letter-spacing: 0.1rem;
 text-decoration: underline;
 color: rgb(95, 95, 95);
+font-family: 'Gaegu', cursive;
+font-size: 25px;
 
 }
 
 .det-info h4{
  
   letter-spacing: 0.1rem;
-
+  font-family: 'Gaegu', cursive;
+  font-size: 23px;
+  color: rgb(95, 95, 95);
+  text-align: left;
   }
+
+.det-info p{
+    letter-spacing: 0.1rem;
+    font-family: 'Gaegu', cursive;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(95, 95, 95);
+    text-align: left;
+    }
+
 
   .det-info span{
  color: crimson;
@@ -534,10 +557,14 @@ color: rgb(95, 95, 95);
   cursor: pointer;
   outline: none;
   background: transparent;
-  border:1px solid dodgerblue;
-  color: rgb(95,95,95);
+  border:1px solid #386641;
+  border-radius: 5px;
+  
   transition: all 0.3s ease-in-out;
   text-transform: capitalize;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  background-color: #6a994e;
 
 }
 
@@ -745,6 +772,81 @@ border-radius: 10%;
   color: rgb(58, 58, 58);
   text-transform: capitalize;
 }
+
+/* the /order page */
+.entire-order-page {
+  display: flex;
+  background-color: #f2e8cf;
+  font-family: 'Gaegu', cursive;
+  flex-direction: column;
+}
+
+.demo-address-container {
+  display: flex;
+  font-family: 'Gaegu', cursive;
+  text-align: center;
+}
+
+.contributor-container {
+  display: flex;
+  font-family: 'Gaegu', cursive;
+  text-align: center;
+}
+
+.contrib-photo {
+  display: flex;
+  font-family: 'Gaegu', cursive;
+  margin-left: 410px;
+  width: 600px;
+}
+
+.edit-order-button {
+  margin-left: 670px; /* keeps button in the middle */
+}
+
+/* .walkthrough-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px 15px 0px;
+} */
+
+.edit-order-button {
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+.edit-order-button:hover {
+  border: 3px solid rgb(240, 238, 238);
+}
+
+.edit-del-loc-button {
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+  margin-left: 580px; /* keeps button in the middle */
+}
+
+.edit-del-loc-button:hover {
+  border: 3px solid rgb(240, 238, 238);
+}
+
+h3 {
+  display: flex;
+  font-family: 'Gaegu', cursive;
+  text-align: center;
+}
+
 
 .payment{
   
@@ -1165,6 +1267,22 @@ background: rgba(0,0,0,0.4);
 
 }
 
+.landingpage-login {
+background-color: #f2e8cf;
+}
+
+.landingpage-login a {
+padding: 10px;
+justify-content: end;
+font-family: 'Gaegu', cursive;
+font-weight: bolder;
+font-size: 20px;
+}
+
+.landingpage-login a:hover {
+  color: white;
+  }
+
 /* With the PBA... */
 .landingpage-rundown {
   display: flex;
@@ -1255,7 +1373,14 @@ background: rgba(0,0,0,0.4);
   font-weight: bolder;
   text-align: left;
   margin-left: 30px;
-  border-style: dotted;
+  border-color: tomato;
+  border-image: 
+    linear-gradient(
+      to top, 
+      tomato, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+  border-style: solid;
 
     }
 

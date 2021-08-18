@@ -95,7 +95,7 @@ export const Register = () => {
             {/* <input type="text" placeholder="delivery count" value={delivery_count} onChange={(e) => setDeliveryCount(e.target.value)}/> */}
 
             <div className='register-button-bit'>
-                <a className="register-button" href='/home'>
+                <a className="register-button" href='/'>
                     <button onClick={handleClick}>Register!</button>
                 </a>
             </div>

@@ -97,7 +97,7 @@ class ProductProvider extends Component {
 
 
 
-    // .........second way...........
+    // ..2nd version..
         console.log(`item ${id} added to cart`);
         const {data, cart}=this.state;
         
@@ -147,7 +147,7 @@ const {cart}=this.state;
 
 
 
-// ......second way......
+// ..other..
 
 cart.forEach((item, index)=>{
     if(item.id===id){
@@ -257,14 +257,14 @@ componentDidMount(){
         return (
             <ProductContext.Provider value={{
 
-            ...this.state,
-            handleNav:this.handleNav,
-            handleCartNav:this.handleCartNav,
-            closeNavCart:this.closeNavCart,
-            addToCart:this.addToCart,
-            deleteItem:this.deleteItem,
-            increaseItem:this.increaseItem,
-            decreaseItem:this.decreaseItem
+                ...this.state,
+                handleNav:this.handleNav,
+                handleCartNav:this.handleCartNav,
+                closeNavCart:this.closeNavCart,
+                addToCart:this.addToCart,
+                deleteItem:this.deleteItem,
+                increaseItem:this.increaseItem,
+                decreaseItem:this.decreaseItem
 
             }}>
                 {this.props.children} 

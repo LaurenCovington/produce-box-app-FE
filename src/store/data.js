@@ -1,6 +1,6 @@
 // carrot price = $4/lb
 // 
-// btw:count is how many you want; not total inventory
+// count is how many you want; not total inventory
 export const Data=[
 
     {
@@ -18,7 +18,7 @@ export const Data=[
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
         price:'4',
-        details:'Harvested from the McDowell Family Farm in Washington State!',
+        details:'Harvested from the McDowell Family Farm in Washington State. MF Farms is a main contributor to this CSA program, offering kale, lettuce, cabbage every season.',
         count:1,
         isInCart:false
 
@@ -39,7 +39,7 @@ export const Data=[
         make_date: 'N/A',
         dropoff_location: 'U-District Farmers Market',
         price:'3',
-        details:'Harvested from the McDowell Family Farm in Washington State!',
+        details: 'Harvested from the McDowell Family Farm in Washington State. MF Farms is a main contributor to this CSA program, offering kale, lettuce, cabbage every season.',
         count:1,
         isInCart:false
 

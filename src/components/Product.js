@@ -1,7 +1,6 @@
-// might be tricky to adapt to Offering.js
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import {ProductConsumer} from '../store/appContext'; // GET LOCATION
+import {ProductConsumer} from '../store/appContext';
 import { Data } from '../store/data';
 
 
@@ -20,8 +19,8 @@ export default class Product extends Component {
 
                 <a href={`/details/${id}`} onClick={closeNavCart}>
                     <div className="img-div">
-                       <img src={img}  alt="Food"/> {/* src={img}      this will be an issue, change data attr */}
-                        </div>
+                        <img src={img}  alt="Food"/>
+                    </div>
                 </a>
 
                 <div className="details">

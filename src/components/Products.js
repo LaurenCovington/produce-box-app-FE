@@ -18,8 +18,8 @@ export default class Products extends Component {
         <div className="products">
 
         <Navbar />
-        <h2>Offerings</h2>
-    
+        <h2>See What Seattle Growers Are Offering Below</h2>
+          <br />
         <div className="products-center">
           {data.map((product)=>{
               return  <Product key={product.id} product={product} addToCart={()=>addToCart(product.id)} closeNavCart={closeNavCart}  />

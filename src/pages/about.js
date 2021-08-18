@@ -1,12 +1,6 @@
-import React, { useContext } from "react";
-import { Link } from 'react-router-dom';
-import { Context } from "../store/appContext";
+import React from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import { BrowserRouter } from "react-router-dom";
-//import "../../styles/home.scss";
-
-// if there's time, build out navbar links below! example offering and list of made up farmers respectively
 
 export const About = () => {
 	return (

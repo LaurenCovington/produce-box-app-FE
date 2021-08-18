@@ -17,13 +17,11 @@ const Offering = (props) => {
                                                             "dried_date": props.dried_date,
                                                             "make_date": props.make_date,
                                                             "dropoff_location": props.dropoff_location});
-    {/* below? */}
     const [showEditBox, setShowEditBox] = useState(false) 
 
     const editButtonClick = () => {
         setShowEditBox(!showEditBox);
     }
-    {/* reference to func that's built and run in (group proj) App.js */}
     const upCountClick = () => {
         const selectedOfferingId = props.id
         props.upCountOffering(selectedOfferingId);
@@ -50,7 +48,7 @@ const Offering = (props) => {
             'dropoff_location': dropoff_location.target.value
         })
     }
-    {/* editOffering() is a func that's built and run in (group proj) App.js file */}
+
     const onSubmitOfferingDetails = () => {
         props.editOffering(props.id, newOfferingDetails);
         setShowEditBox(!showEditBox)
@@ -62,7 +60,7 @@ const Offering = (props) => {
         <ul>
             <>
                 {showEditBox ? (
-                <> {/* what should be in <textarea> and <li> default values?? surely not every field? */}
+                <> 
                     <textarea defaultValue={props.name} onChange={ onDetailsChange }></textarea>
                     <button onClick={() => onSubmitOfferingDetails(newOfferingDetails)}>Save</button>
                 </>

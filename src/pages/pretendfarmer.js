@@ -1,16 +1,10 @@
-// 'see how it works' button leads to this page/comp to show how farmer would post an offering (leave category alone on home)
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
-import { Context } from "../store/appContext";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import { BrowserRouter } from "react-router-dom";
 
 import CategoryList from "../components/CategoryList";
-import Category from "../components/Category";
 import OfferingList from "../components/OfferingList";
-import Offering from "../components/Offering";
 import NewCategoryForm from "../components/NewCategoryForm";
 import NewOfferingForm from "../components/NewOfferingForm";
 
@@ -148,7 +142,8 @@ export const PretendFarmer = () => {
             })
             }
 
-    const [showCategoryForm, setShowCategoryForm] = useState(true)
+    //const [showCategoryForm, setShowCategoryForm] = useState(true)
+    const [showCategoryForm] = useState(true)
 	
     return (
 		<div className="whole-walkthrough-page">

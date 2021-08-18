@@ -1,6 +1,4 @@
-import React, { lazy, useState, useEffect, Suspense } from 'react';
-import { BrowserRouter, Router, Route, Switch, Link } from "react-router-dom";
-import axios from 'axios';
+import React, { lazy } from 'react';
 import {useRoutes} from 'hookrouter';
 import './App.css';
 
@@ -17,10 +15,10 @@ const Register = lazy(() => import('./pages/register'));
 const About = lazy(() => import('./pages/about'));
 
 //import Home from './pages/home';
-const Home = lazy(() => import('./pages/home'));
+//const Home = lazy(() => import('./pages/home'));
 
 //import Cart from './components/Cart';
-const Cart = lazy(() => import('./components/Cart'));
+//const Cart = lazy(() => import('./components/Cart'));
 
 //import OfferingDetails from './components/OfferingDetails';
 const OfferingDetails = lazy(() => import('./components/OfferingDetails'));
@@ -39,7 +37,7 @@ function App() {
   const routes = {
     '/': () => <LandingPage />, // DONE
     '/register': () => <Register />, // DONE
-    '/login': () => <Login />,   // * copy paste from register, over in pba_login or maybe use delia scrnshots to piece together?
+    '/login': () => <Login />,   // DONE
 
     '/about': () => <About />, // DONE AND CART IS DONE
     '/showOfferings': () => <Products />, // DONE

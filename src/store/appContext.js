@@ -99,7 +99,8 @@ class ProductProvider extends Component {
 
     // ..2nd version..
         console.log(`item ${id} added to cart`);
-        const {data, cart}=this.state;
+        // const {data, cart}=this.state;
+        const {data}=this.state;
         
     let check = this.state.cart.find(item=>item.id===id);
     

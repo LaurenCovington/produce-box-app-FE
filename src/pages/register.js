@@ -1,31 +1,27 @@
-import React, { useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
-import { Context } from "../store/appContext";
+import React, { useState } from "react";
+// import { useHistory } from "react-router-dom";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-//import "../../styles/home.scss";
 
-// sign up page, template from login.js
 export const Register = () => {
 	//const { store, actions } = useContext(Context);
 
     const [ name, setName ] = useState(""); 
     const [ email, setEmail ] = useState("");
-    const [ user_type, setUserType ] = useState("");  
+    //const [ user_type, setUserType ] = useState("");  
     const [ username, setUsername ] = useState("");
     const [ password, setPassword ] = useState("");
     const [ address, setAddress ] = useState("");
     const [ phone, setPhone ] = useState("");
 
-    {/* p sure these shouldnt be here... which means they shouldnt be in NewUserForm.js, either... */}
-    const [ contribution_dropoff, setContributionDropoff ] = useState("");
-    const [ donations_sent, setDonationsSent ] = useState("");
-    const [ donations_received, setDonationsReceived ] = useState("");
-    const [ organization, setOrganization ] = useState("");
-    const [ delivery_count, setDeliveryCount] = useState("");
+    
+    //const [ contribution_dropoff, setContributionDropoff ] = useState("");
+    //const [ donations_sent, setDonationsSent ] = useState("");
+    //const [ donations_received, setDonationsReceived ] = useState("");
+    //const [ organization, setOrganization ] = useState("");
+    //const [ delivery_count, setDeliveryCount] = useState("");
 
     // check if useHistory is relevant for registration...
-    const history = useHistory();
+    //const history = useHistory();
     //const token = sessionStorage.getItem("token") >> from login
     //console.log('Verifying token: ' + store.user)
     // validation: add logic to decline email's already in the db -- hit BE create_user() 

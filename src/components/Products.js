@@ -1,9 +1,7 @@
-// might be tricky to adapt to OfferingList.js
 import React, { Component } from 'react';
 import Product from './Product';
-import {ProductConsumer} from '../store/appContext'; // GET LOCATION
+import {ProductConsumer} from '../store/appContext';
 import Navbar from './navbar';
-import Data  from '../store/data';
 
 
 export default class Products extends Component {

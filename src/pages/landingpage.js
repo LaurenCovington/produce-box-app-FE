@@ -1,9 +1,6 @@
-import React, { useContext } from "react";
-import { BrowserRouter, Link } from 'react-router-dom';
-//import { Context } from "../store/appContext";
+import React from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-//import "../../styles/home.css";
 
 export const LandingPage = () => {
 	return (

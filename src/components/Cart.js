@@ -1,7 +1,5 @@
 import React from 'react';
 import {ProductConsumer} from '../store/appContext';
-import {Link} from 'react-router-dom';
-import { Data } from '../store/data';
 
 export default function Cart(props) {
     const { cartOpen,

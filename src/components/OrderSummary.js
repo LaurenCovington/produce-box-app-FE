@@ -1,20 +1,11 @@
-// equiv to Payment.js
-// check Cart.js for syntax for rendering order? or just hardcode it for demo
-import React, { useContext } from "react";
 import { BrowserRouter, Link } from 'react-router-dom';
-//import { Context } from "../store/appContext";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-//import "../../styles/home.css";
-import { Context } from "../store/appContext";
-import { ProductConsumer } from "../store/appContext";
 
 export const OrderSummary = (props) => {
 	return (
 		<div>
             <Navbar />
-
-
 
             <div className="entire-order-page">
 
@@ -51,7 +42,7 @@ export const OrderSummary = (props) => {
                 <br />
                 <h2>Need to Change the Delivery Location? If your order is more than 24 hours out, you can connect with your NPO delivery person to make changes to the address.</h2>
                 <br />
-                {/* <h3>If your order is more than 24 hours out, you can connect with your NPO delivery person to make changes to the address.</h3> */}
+                
                 <a href='https://www.gmail.com'>
                     <button className='edit-del-loc-button'>Shoot your NPO Rep An Email!</button>
                 </a>
@@ -62,13 +53,6 @@ export const OrderSummary = (props) => {
 
 
             </div>
-
-
-
-
-
-
-
 
 			<div className='remnant'>
 				<a href="https://github.com/LaurenCovington/">
@@ -87,10 +71,6 @@ export const OrderSummary = (props) => {
             </div>
 			
 			
-
-
-
-
 		</div>
 	);
 };

@@ -39,7 +39,7 @@ const NewCategoryForm = (props) => {
                     placeholder="Category Name"
                     value={categoryForm.category_title}
                     onChange={ onTitleChange }
-                    className={(categoryForm.category_title.length === 0)? 'invalid-form-input' : ''}
+                    // className={(categoryForm.category_title.length === 0)? 'invalid-form-input' : ''}
                 />
             </div>
 

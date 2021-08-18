@@ -1,19 +1,9 @@
 // when you click an offering, this is the comp that shows its detail info (price, etc)
 import React, { Component } from 'react';
 import { ProductConsumer } from '../store/appContext';
-// import { Link } from 'react-router-dom';
-import { Data } from '../store/data';
 import Navbar from './navbar';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams
-} from "react-router-dom";
-
 import { withRouter } from "react-router";
-import Offering from './Offering';
+
 
 class OfferingDetails extends Component {
     

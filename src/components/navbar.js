@@ -1,17 +1,15 @@
-// should be able to just drop this into current navbar file; make sure to import Cart and ProductConsumer correctly
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {ProductConsumer} from '../store/appContext'; // GET LOCATION
+import {ProductConsumer} from '../store/appContext';
 import Cart from './Cart';
 import './navbar.css';
-//import logo from '../img/logo.png';
 
 
 export default function Navbar() {
     return (
 <ProductConsumer>
     {value=>{
-        const{handleNav,navOpen,cartOpen, handleCartNav,closeNavCart,cart}=value;
+        const{handleNav,navOpen,handleCartNav,closeNavCart,cart}=value;
 
     return(
     <div className="container sticky">

@@ -1,26 +1,7 @@
 import React from 'react';
-import {ProductConsumer} from '../store/appContext'; // GET LOCATION
+import {ProductConsumer} from '../store/appContext';
 import {Link} from 'react-router-dom';
 import { Data } from '../store/data';
-
-// cartOpen and stuff are mentioned in here, Context file and Navbar file
-// closeNavCart mentioned in here, context, navbar, offering, offeringlist
-// handleCart... in here, context, navbar
-// shipping in here and Context file
-
-// ProductConsumer is fine but all other 'product' instances must be 'offering'
-// cart is in here, App.js, context file, data, details, navbar, product (offering), and products (offeringlist)
-// deleteItem - here and context file 
-// increaseItem - here and context file
-// decreaseItem - here and context file
-// total - here and context file
-
-// cartOpen - here, context and navbar
-// handleCartNav - here, context and navbar
-// product (lowercase) - here, product.js (offering), productS.js (offeringlist)
-
-
-// Payment link and comp need to be like 'order review or smthg w the delivery address, contact info and pic of deliverer, if possible
 
 export default function Cart(props) {
     const { cartOpen,
@@ -68,7 +49,7 @@ export default function Cart(props) {
                 </div>
 
                 <div className="del-item"> {/* div used to also contain: onClick={()=>deleteItem(product.id)} */}
-                    <button onClick={()=>deleteItem(product.id)}>Remove</button>
+                    <button className='test' onClick={()=>deleteItem(product.id)}>Remove</button>
                     <i className="fa fa-trash" aria-hidden="true"></i>
                 </div>
     </div>

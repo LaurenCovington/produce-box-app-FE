@@ -912,6 +912,8 @@ background: rgba(0,0,0,0.4);
   max-width: 100%;
 }
 
+/* Get A Sense of How it all works button */
+
 .walkthrough-button-container {
   display: flex;
   justify-content: center;
@@ -936,4 +938,215 @@ background: rgba(0,0,0,0.4);
 .remnant {
   display: flex;
   justify-content: center;
+}
+
+/* pretend farmer (post and view cats, post offerings */
+.walkthrough-title {
+  font-family: 'Gaegu', cursive;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: left;
+  padding: 15px;
+}
+
+.walkthrough-title-2 {
+  font-family: 'Gaegu', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: left;
+  padding: 15px;
+}
+
+.walkthrough-title-3 {
+  font-family: 'Gaegu', cursive;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: left;
+  padding: 15px;
+}
+
+.create-cat {
+  font-family: 'Gaegu', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+.create-cat form input {
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 15px;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+  margin: 5px 5px 5px 5px;
+}
+/* submit category button */
+.create-cat form input:hover {
+    border:1px solid rgb(240, 238, 238);
+    background: rgb(49, 49, 49);
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* field for entering category name */
+.block-hover .field {
+  border:1px solid rgb(240, 238, 238);
+
+  cursor: pointer;
+}
+
+.choose-category-prompt {
+  font-family: 'Gaegu', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* shows chosen category */
+.offerings-container .currentcategory {
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 25px;
+  
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  border: 2px;
+  border-radius: 5px;
+  background-color: #f2e8cf;
+  color: rgb(58, 51, 51);
+}
+
+/* space around the collection of category buttons */
+.listofCategories {
+    font-family: 'Gaegu', cursive;
+    font-weight: bolder;
+    font-size: 15px;
+    justify-content: center;
+    padding: 5px;
+    border: 2px ;
+    border-radius: 5px;
+    background-color: #f2e8cf;
+    color: rgb(58, 51, 51);
+  }
+
+  /* the category buttons themselves */
+.single-category button {
+    margin: 5px 5px 5px 5px;
+    font-family: 'Gaegu', cursive;
+    font-weight: bolder;
+    font-size: 15px;
+    justify-content: center;
+    padding: 5px;
+    border: 2px solid ;
+    border-radius: 5px;
+    background-color: #A7C957;
+    color: rgb(58, 51, 51);
+  }
+
+  .single-category button:hover{
+    border:1px solid rgb(240, 238, 238);
+    background: rgb(49, 49, 49);
+    color: #ccc;
+    cursor: pointer;
+  }
+
+.whole-walkthrough-page {
+  background-color: #f2e8cf;
+}
+
+/* space around offering post fields */
+.listofOfferings {
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 15px;
+  justify-content: center;
+  padding: 5px;
+  border: 2px ;
+  border-radius: 5px;
+  background-color: #f2e8cf;
+  color: rgb(58, 51, 51);
+}
+
+.create-offering {
+  /* font-family: 'Gaegu', cursive;
+  font-size: 20px;
+  font-weight: bolder; */
+  text-align: center;
+
+  margin: 5px 5px 5px 5px;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 15px;
+  justify-content: center;
+  padding: 5px;
+  border: 2px;
+  border-radius: 5px;
+  background-color: #f2e8cf;
+  color: rgb(58, 51, 51);
+}
+
+.create-offering h3 {
+  font-family: 'Gaegu', cursive;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* the offering buttons themselves */
+.offering-form-entries input {
+  margin: 5px 5px 5px 5px;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 15px;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+.offering-form-entries input:hover{
+  border:1px solid rgb(240, 238, 238);
+  background: rgb(49, 49, 49);
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* fields that prompt offering buttons */
+.offering-form-entries label {
+  margin: 5px 5px 5px 5px;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 18px;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+.show-offerings-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px 15px 0px;
+}
+
+.show-offerings-container .show-offerings-button button {
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+.show-offerings-button:hover {
+  border: 3px solid rgb(240, 238, 238);
 }

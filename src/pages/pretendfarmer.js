@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { Context } from "../store/appContext";
 import Footer from "../components/footer";
-import { Navbar } from "../components/navbar";
+import Navbar from "../components/navbar";
 import { BrowserRouter } from "react-router-dom";
 
 import CategoryList from "../components/CategoryList";
@@ -151,22 +151,17 @@ export const PretendFarmer = () => {
     const [showCategoryForm, setShowCategoryForm] = useState(true)
 	
     return (
-		<div className="text-center mt-5">
+		<div className="whole-walkthrough-page">
+            <Navbar />
 
-			<nav id="navbar">
-				<a href="/">Join</a>
-				<a href="/farmers">See Some of Our Donors!</a>
-        	</nav>
-
-            <h1 className='walkthrough-title'> Our Farmers Agree To Contribute Portions of Their Harvests </h1>
+            <h1 className='walkthrough-title'> Our Farmers Agree To Contribute Portions of Their Harvests. </h1>
 			<br />
+			<h2 className='walkthrough-title-2'>Here's How They Share Their Contributions.</h2>
+            <br />
+            <h3 className='walkthrough-title-3'>Different regions yield different types of foods. Farmers can create categories according to what they can offer.</h3>
+            <br />
 
-			<h2>Here's How They Share Their Contributions</h2>
-			<br />
-            <br />
-            <h3>Different regions yield different types of foods. Farmers can create categories according to what they can offer.</h3>
-            <br />
-            <section className='flex-container-wrap'>
+            <section className='create-cat'>
                 <h2>Create a New Category</h2>
                 {showCategoryForm ? <NewCategoryForm createNewCategory={ createNewCategory }/> : '' }
             </section>
@@ -181,8 +176,8 @@ export const PretendFarmer = () => {
                     />
             </section>
 
-            <section className='offerings_container'> 
-                <div className='currentcategory'>{selectedCategory.category_title}</div>
+            <section className='offerings-container'> 
+                <div className='currentcategory'>Contribute to the {selectedCategory.category_title} Category Below</div>
                     < OfferingList 
                         offeringsData={ offeringsData }
                         upCountOffering={ upCountOffering }
@@ -196,35 +191,37 @@ export const PretendFarmer = () => {
                 {selectedCategory.id !== null ? 
                     <>
                     <h3>Post A New Offering</h3> 
-                    < NewOfferingForm createNewOffering={ createNewOffering }/>
+                    
+                    <NewOfferingForm createNewOffering={ createNewOffering }/>
                     </>
                     : ''
+
                 }
             </section>
 			
             <br />
-			<h2>
-				<a href='/demoofferingview'><button className="walkthrough-button">Submit the Posting to See What Our Community Residents Choose From</button></a> 
+			<h2 className='show-offerings-container'>
+				<a className="show-offerings-button" href='/demoofferingview'><button>Submit the Posting to See What Our Community Residents Choose From</button></a> 
 			</h2>
 
-			<p className='welcomepage-photo'>
+			{/* <p className='welcomepage-photo'>
 				<img src='https://images.unsplash.com/photo-1486328228599-85db4443971f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80' alt='Greenhouse with fruiting tomato plants pictured' />
-			</p>
+			</p> */}
 
-			<div>
+			<div className='remnant'>
 				<a href="https://github.com/LaurenCovington/">
 					Code Housed Here 
 				</a>
 			</div>
 
-			<div>
-				<BrowserRouter>
-					<Link to="/login">Logout</Link>
-				</BrowserRouter>
+			<div className='remnant'>
+				<a href="/login">Logout</a>
                 
             </div>
-
-			<Footer />
+            <div className='remnant'>
+                <Footer />
+            </div>
+			
 			
 		</div>
 	);

@@ -11,12 +11,12 @@ import './NewOfferingForm.css';
 const NewOfferingForm = (props) => {
     const [offeringForm, setOfferingForm] = useState({
         name: '',
-        total_inventory: 0, 
+        total_inventory: '', 
         expiration_date: '',
-        usda_organic: false,
+        usda_organic: '',
         usage_time_limit: '',
         side_effects: '',
-        contribution_date: 'NOW',
+        contribution_date: '',
         bake_date: '',
         dried_date: '',
         make_date: '',
@@ -119,11 +119,11 @@ const NewOfferingForm = (props) => {
 
         setOfferingForm({
             name: '',
-            total_inventory: 0,
-            usda_organic: false,
+            total_inventory: '',
+            usda_organic: '',
             usage_time_limit: '',
             side_effects: '',
-            contribution_date: 'NOW',
+            contribution_date: '',
             expiration_date: '',
             bake_date: '',
             dried_date: '',
@@ -134,8 +134,8 @@ const NewOfferingForm = (props) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <div>
-                <label>Offering Name</label> 
+            <div className='offering-form-entries'>
+                <label className='field-title'>Offering Name</label> 
                 <input placeholder="Name of donation"
                     value={offeringForm.name}
                     onChange={ onNameChange }
@@ -143,7 +143,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* className logic needs to be condensed; get out of ternary syntax */}
+            <div className='offering-form-entries'> {/* className logic needs to be condensed; get out of ternary syntax */}
                 <label>Total Inventory</label> 
                 <input placeholder="Digits, please!"
                     value={offeringForm.total_inventory}
@@ -152,16 +152,16 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* check className logic */}
+            <div className='offering-form-entries'> {/* check className logic */}
                 <label>USDA Organic?</label> 
-                <input placeholder="Enter 'true' or 'false'"
+                <input placeholder="Enter 'True' or 'False'"
                     value={offeringForm.usda_organic}
                     onChange={ onOrganicStatusChange }
                     className={(offeringForm.usda_organic !== false) || (offeringForm.usda_organic !== true)? 'invalid-form-input' : ''}
                 />
             </div>
 
-            <div> {/* check className logic, nullables? */}
+            <div className='offering-form-entries'> {/* check className logic, nullables? */}
                 <label>Usage Time Limit</label> 
                 <input placeholder="In weeks"
                     value={offeringForm.usage_time_limit}
@@ -170,7 +170,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* check disable logic given nullables? */}
+            <div className='offering-form-entries'> {/* check disable logic given nullables? */}
                 <label>Side Effects - if any</label> 
                 <input placeholder="Enter 'N/A' if needed"
                     value={offeringForm.side_effects}
@@ -179,7 +179,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* how to do default=now here?; any 'disable' logic to add here? */}
+            <div className='offering-form-entries'> {/* how to do default=now here?; any 'disable' logic to add here? */}
                 <label>Contribution Date</label> 
                 <input placeholder="YYYY-MM-DD"
                     value={offeringForm.contribution_date}
@@ -187,7 +187,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* how to do default=now here?; any 'disable' logic to add here? */}
+            <div className='offering-form-entries'> {/* how to do default=now here?; any 'disable' logic to add here? */}
                 <label>Expiration Date</label> 
                 <input placeholder="YYYY-MM-DD"
                     value={offeringForm.expiration_date}
@@ -195,7 +195,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* nullables?, disable logic given nullables? */}
+            <div className='offering-form-entries'> {/* nullables?, disable logic given nullables? */}
                 <label>Bake Date - if any</label> 
                 <input placeholder="YYYY-MM-DD"
                     value={offeringForm.bake_date}
@@ -204,7 +204,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* nullables?, disable logic given nullables? */}
+            <div className='offering-form-entries'> {/* nullables?, disable logic given nullables? */}
                 <label>Dried Date - if any</label> 
                 <input placeholder="YYYY-MM-DD"
                     value={offeringForm.dried_date}
@@ -213,7 +213,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* nullables?, disable logic given nullables? */}
+            <div className='offering-form-entries'> {/* nullables?, disable logic given nullables? */}
                 <label>Make Date - if any</label> 
                 <input placeholder="YYYY-MM-DD"
                     value={offeringForm.make_date}
@@ -222,7 +222,7 @@ const NewOfferingForm = (props) => {
                 />
             </div>
 
-            <div> {/* nullables?, disable logic given nullables? */}
+            <div className='offering-form-entries'> {/* nullables?, disable logic given nullables? */}
                 <label>Drop-Off Location</label> 
                 <input placeholder="Address given by NPO"
                     value={offeringForm.dropoff_location}

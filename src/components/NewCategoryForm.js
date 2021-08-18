@@ -33,9 +33,9 @@ const NewCategoryForm = (props) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <div>
-                <label>Title</label> 
-                <input
+            <div className='block-hover'>
+                {/* <label>Title</label>  */}
+                <input className='field'
                     placeholder="Category Name"
                     value={categoryForm.category_title}
                     onChange={ onTitleChange }

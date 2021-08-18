@@ -12,7 +12,7 @@ const Category = (props) => {
     };
 
     return (
-        <div> 
+        <div className='single-category'> 
             <button className="categorybutton" onClick={() => props.onCategorySelect({id:props.id, category_title:props.category_title})}>
                 { props.category_title }
             </button>

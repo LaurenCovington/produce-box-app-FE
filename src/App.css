@@ -1,6 +1,9 @@
 /* */
-/* */
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap');
+/* gaegu import that goes w ' font-family: 'Gaegu', cursive; ' */
+/* @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap'); */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
 /* everything gets this styling */
 * {
   margin:0;
@@ -45,7 +48,7 @@ nav{
   top:0;
   z-index: 10;
   background: #bc4749;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   color: #f2e8cf;
 }
@@ -68,7 +71,7 @@ nav .logo-btn a{
   color: #fefefe;
   display: flex;
   align-items: center;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   
 
 }
@@ -333,7 +336,7 @@ display: none;
 
 .products h2{
   background-color: #f2e8cf;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 40px;
   text-align: center;
   
@@ -380,12 +383,12 @@ text-align: center;
 }
 
 .details h3{
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.1rem;
 }
 
 .details p{
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #bc4749;
   font-size: 20px;
   padding: 10px 0;
@@ -395,7 +398,7 @@ text-align: center;
 .details .cartBtn button{
   display: flex;
   justify-content: center;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   width:100%;
   padding:10px 10px;
@@ -480,7 +483,7 @@ background-color: #faf6ed;
 h2{
   text-align: center;
   margin:10px 0;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 30px;
   letter-spacing: 0.1rem;
@@ -512,7 +515,7 @@ text-align: center;
 letter-spacing: 0.1rem;
 text-decoration: underline;
 color: rgb(95, 95, 95);
-font-family: 'Gaegu', cursive;
+font-family: 'Source Sans Pro', sans-serif;
 font-size: 25px;
 
 }
@@ -520,7 +523,7 @@ font-size: 25px;
 .det-info h4{
  
   letter-spacing: 0.1rem;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 23px;
   color: rgb(95, 95, 95);
   text-align: left;
@@ -528,7 +531,7 @@ font-size: 25px;
 
 .det-info p{
     letter-spacing: 0.1rem;
-    font-family: 'Gaegu', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 23px;
     font-weight: bold;
     color: rgb(95, 95, 95);
@@ -562,7 +565,7 @@ font-size: 25px;
   
   transition: all 0.3s ease-in-out;
   text-transform: capitalize;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   background-color: #6a994e;
 
@@ -698,7 +701,7 @@ border-radius: 10%;
 
 .item-cart p{
   color:rgb(71, 71, 71);
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: italic;
   font-size: 18px;
   text-decoration: underline dotted;
@@ -743,7 +746,7 @@ border-radius: 10%;
   top:0px;
   cursor: pointer;
   padding:  2px 10px;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #BC4749;
 }
 
@@ -753,7 +756,7 @@ border-radius: 10%;
 
 .extra-info{
   display: flex;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: large;
   flex-direction: column;
@@ -777,25 +780,25 @@ border-radius: 10%;
 .entire-order-page {
   display: flex;
   background-color: #f2e8cf;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   flex-direction: column;
 }
 
 .demo-address-container {
   display: flex;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
 .contributor-container {
   display: flex;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
 .contrib-photo {
   display: flex;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-left: 410px;
   width: 600px;
 }
@@ -811,7 +814,7 @@ border-radius: 10%;
 } */
 
 .edit-order-button {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: larger;
   padding: 5px;
@@ -826,7 +829,7 @@ border-radius: 10%;
 }
 
 .edit-del-loc-button {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: larger;
   padding: 5px;
@@ -843,7 +846,7 @@ border-radius: 10%;
 
 h3 {
   display: flex;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
@@ -875,7 +878,7 @@ h3 {
 
 
 .empty{
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   text-align: center;
   margin-top: 40px;
@@ -979,7 +982,7 @@ background: rgba(0,0,0,0.4);
 
 /* 'what we do and why' */
 .about-title {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 50px;
   font-weight: bolder;
   text-align: center;
@@ -990,7 +993,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .about-info {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   font-weight: bolder;
   text-align: center;
@@ -1023,7 +1026,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .walkthrough-button-container .walkthrough-button button {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: larger;
   padding: 5px;
@@ -1041,13 +1044,13 @@ background: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
   background-color: #f2e8cf;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
 }
 
 /* pretend farmer (post and view cats, post offerings */
 .walkthrough-title {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 50px;
   font-weight: bolder;
   text-align: left;
@@ -1055,7 +1058,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .walkthrough-title-2 {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 40px;
   font-weight: bolder;
   text-align: left;
@@ -1063,7 +1066,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .walkthrough-title-3 {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   font-weight: bolder;
   text-align: left;
@@ -1071,13 +1074,13 @@ background: rgba(0,0,0,0.4);
 }
 
 .create-cat {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   font-weight: bolder;
   text-align: center;
 }
 .create-cat form input {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 15px;
   justify-content: center;
@@ -1104,7 +1107,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .choose-category-prompt {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   font-weight: bolder;
   text-align: center;
@@ -1112,7 +1115,7 @@ background: rgba(0,0,0,0.4);
 
 /* shows chosen category */
 .offerings-container .currentcategory {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 25px;
   
@@ -1126,7 +1129,7 @@ background: rgba(0,0,0,0.4);
 
 /* space around the collection of category buttons */
 .listofCategories {
-    font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;
     font-size: 15px;
     justify-content: center;
@@ -1140,7 +1143,7 @@ background: rgba(0,0,0,0.4);
   /* the category buttons themselves */
 .single-category button {
     margin: 5px 5px 5px 5px;
-    font-family: 'Gaegu', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;
     font-size: 15px;
     justify-content: center;
@@ -1164,7 +1167,7 @@ background: rgba(0,0,0,0.4);
 
 /* space around offering post fields */
 .listofOfferings {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 15px;
   justify-content: center;
@@ -1182,7 +1185,7 @@ background: rgba(0,0,0,0.4);
   text-align: center;
 
   margin: 5px 5px 5px 5px;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 15px;
   justify-content: center;
@@ -1194,7 +1197,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .create-offering h3 {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 25px;
   font-weight: bolder;
   text-align: center;
@@ -1203,7 +1206,7 @@ background: rgba(0,0,0,0.4);
 /* the offering buttons themselves */
 .offering-form-entries input {
   margin: 5px 5px 5px 5px;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 15px;
   justify-content: center;
@@ -1224,7 +1227,7 @@ background: rgba(0,0,0,0.4);
 /* fields that prompt offering buttons */
 .offering-form-entries label {
   margin: 5px 5px 5px 5px;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 18px;
   justify-content: center;
@@ -1242,7 +1245,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .show-offerings-container .show-offerings-button button {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: larger;
   padding: 5px;
@@ -1274,7 +1277,7 @@ background-color: #f2e8cf;
 .landingpage-login a {
 padding: 10px;
 justify-content: end;
-font-family: 'Gaegu', cursive;
+font-family: 'Source Sans Pro', sans-serif;
 font-weight: bolder;
 font-size: 20px;
 }
@@ -1295,9 +1298,9 @@ font-size: 20px;
   margin-inline-end: 0px;
   direction: rtl;
 
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   text-align: left;
   margin-left: 30px;
   }
@@ -1315,9 +1318,10 @@ font-size: 20px;
     margin-inline-end: 0px;
     /* direction: rtl; */
   
-    font-family: 'Gaegu', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
-    font-weight: bolder;
+    /* font-style: italic; */
+    /* font-weight: bolder; */
     text-align: left;
     margin-left: 30px;
     }
@@ -1351,6 +1355,9 @@ font-size: 20px;
     position: relative; */
 
     /* banner style below */
+    position: absolute;
+    right: 5em;
+    top: 5em;
     width: 600px; /* was 100%*/
     /* background-image: url(https://image.shutterstock.com/image-photo/pea-shoots-rows-on-garden-600w-1619642668.jpg); */
     height: 405px;
@@ -1368,7 +1375,7 @@ font-size: 20px;
   margin-inline-end: 0px;
   direction: rtl;
 
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   font-weight: bolder;
   text-align: left;
@@ -1387,7 +1394,7 @@ font-size: 20px;
 /* whole registration container */
 .outermost-register-container {
   background-color: #f2e8cf;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 25px;
   text-align: left;
@@ -1396,7 +1403,7 @@ font-size: 20px;
 /* 'Register Here' */
 .outermost-register-container h1 {
   background-color: #f2e8cf;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 45px;
   text-align: left;
@@ -1410,7 +1417,7 @@ font-size: 20px;
 /* registration fields themselves*/
 .outermost-register-container input {
     margin: 5px 5px 5px 5px;
-    font-family: 'Gaegu', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;
     font-size: 15px;
     justify-content: center;
@@ -1424,7 +1431,7 @@ font-size: 20px;
 /*the select user field */
 .outermost-register-container select {
   margin: 5px 5px 5px 5px;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: 15px;
   justify-content: center;
@@ -1448,7 +1455,7 @@ font-size: 20px;
   margin-bottom: 10px;
   /* padding: 15px 0px 15px 0px; */
 
-  font-family: 'Gaegu', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bolder;
   font-size: large;
 

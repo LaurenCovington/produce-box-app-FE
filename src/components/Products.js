@@ -7,26 +7,26 @@ import Data  from '../store/data';
 
 
 export default class Products extends Component {
-render() {
-return (
-<ProductConsumer>
-{value=>{
-    const {data, addToCart,closeNavCart}=value;
+  render() {
+    return (
+    <ProductConsumer>
+      {value=>{
+        const {data, addToCart,closeNavCart}=value;
+        
+        return(
 
-    return(
-      
-      <div className="products">
+        <div className="products">
+
         <Navbar />
-      <h2>Offerings</h2>
+        <h2>Offerings</h2>
     
-      <div className="products-center">
-        {data.map((product)=>{
+        <div className="products-center">
+          {data.map((product)=>{
+              return  <Product key={product.id} product={product} addToCart={()=>addToCart(product.id)} closeNavCart={closeNavCart}  />
+          })}  
+        </div> 
 
-            return  <Product key={product.id} product={product} addToCart={()=>addToCart(product.id)} closeNavCart={closeNavCart}  />
-        })}  
-      </div> 
-
-    </div>
+      </div>
     )
 }}
 </ProductConsumer>

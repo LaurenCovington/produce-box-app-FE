@@ -14,7 +14,7 @@ li{
 }
 
 /* found in cart.js, OrderSummary.js, Product.js, about.js, displayOfferings.js, home.js, landingpage.js, navbar.js, offering.js, pretendfarmer.js, register.js, demo.js */
-a{
+a {
   text-decoration: none;
 
 }
@@ -30,16 +30,13 @@ a{
 .container{
   
   margin:0 auto;
-  background: rgb(66, 74, 92);
   
 }
 
 nav{
-  background: rgb(166, 169, 175);
+  background: #bc4749;
   max-width:1100px;
   margin:0 auto;
-
- 
   
 }
 
@@ -47,7 +44,10 @@ nav{
   position:sticky;
   top:0;
   z-index: 10;
- 
+  background: #bc4749;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  color: #f2e8cf;
 }
 
 nav .logo-btn{
@@ -68,45 +68,30 @@ nav .logo-btn a{
   color: #fefefe;
   display: flex;
   align-items: center;
-  font-style: italic;
+  font-family: 'Gaegu', cursive;
   
 
- }
-
- nav .logo-btn .shoes{
-  color:red;
-  font-size:20px;
-  padding-right: 5px;
-  
-
- }
+}
 
 
- nav .logo-btn .btn{
-   color: #fefefe;
-   cursor: pointer;
- }
-
- .links{
-  background: rgb(98, 104, 117);
+.links{
+  background: #f2e8cf;
   transform: translateX(-100%);
   bottom: 0;
   top:60px;
   width: 100%;
   position: fixed;
-
   transition: all 0.5s ease-in-out;
   
- }
+}
 
  .newLinks{
-  background: rgb(98, 104, 117);
+  background: #f2e8cf;
   transform: translateX(0%);
   bottom: 0;
   top:60px;
   width: 100%;
   position: fixed;
-  
   transition: all 0.5s ease-in-out;
  }
 
@@ -126,7 +111,7 @@ nav .logo-btn a{
  .links li a:hover{
   display: block;
   padding:10px 20px;
- color: white;
+  color: white;
  /* border-bottom: 1px dashed rgb(143, 141, 141); */
   
  
@@ -149,7 +134,7 @@ nav .logo-btn a{
   content: '';
   position: absolute;
   width: 100%;
- border-bottom: 1px  dashed rgb(143, 141, 141);
+  border-bottom: 1px  dashed rgb(143, 141, 141);
   left: 0;
   height: auto;
   display: block;
@@ -170,7 +155,7 @@ nav .logo-btn a{
   position: absolute;
   top:-10px;
   right:-12px;
-  background: crimson;
+  background: #BC4749;
   padding:  1px;
   border-radius: 50%;
   text-align: center;
@@ -220,7 +205,7 @@ nav .logo-btn a{
 }
 
 
-.carta{
+.cart a{
 display: none;
 
 }
@@ -340,35 +325,35 @@ display: none;
 }
 
 
-/* products */
+/* PRODUCT and PRODUCTS */
 .products{
-
- width:100%;
- 
-  
+  width:100%;
+  background-color: #f2e8cf;
 }
 
 .products h2{
+  background-color: #f2e8cf;
+  font-family: 'Gaegu', cursive;
+  font-size: 40px;
   text-align: center;
+  
   margin: 20px 0;
   letter-spacing: 0.3rem;
-  font-weight: 400px;
-  color: rgb(100, 100, 100);
-  text-decoration: underline;
+  font-weight: bolder;
 }
 
 .products-center{
+  background-color: #f2e8cf;
   padding:10px;
   max-width: 1100px;
   margin:0 auto;
 }
+
 .product{
-  box-shadow: 1px 1px 4px 1px gray;
- 
+  box-shadow: 1px 1px 4px 1px#386641;
   margin:0px auto;
   margin-bottom: 40px;
   transition: all 0.3s ease-in-out;
- 
 }
 
 .product:hover{
@@ -395,59 +380,48 @@ text-align: center;
 }
 
 .details h3{
- color:rgb(105, 105, 105);
- letter-spacing: 0.1rem;
- font-style: italic;
- font-family: cursive;
+  font-family: 'Gaegu', cursive;
+  letter-spacing: 0.1rem;
 }
 
 .details p{
-  color:crimson;
+  font-family: 'Gaegu', cursive;
+  color: #bc4749;
+  font-size: 20px;
   padding: 10px 0;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-.details button{
+.details .cartBtn button{
+  display: flex;
+  justify-content: center;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
   width:100%;
   padding:10px 10px;
   font-size:18px;
   outline: none;
   border:none;
-  background: darkgrey;
+  background: #386641;
   transition: all 0.3s ease-in-out;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .details button:hover{
- 
+
   background: rgb(131, 130, 130);
   color: white;
-cursor: pointer;
+  cursor: pointer;
 
 
 }
 
 .img-div{
   position: relative;
- 
 }
 
 .img-div:hover img{
- transform: scale(1.05);
- 
+  transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width:576px){
 .products-center{
@@ -459,30 +433,20 @@ cursor: pointer;
 flex:0 0 calc(50% - 20px);
  margin-bottom: 20px;
 }
-
 }
-
 
 @media screen and (min-width:876px){
   .products-center{
     display: flex;
     flex-wrap: wrap;
   justify-content: space-between;
-  
-    
   }
-  
+
   .product{
   flex:0 0 calc(33% - 10px);
- 
-   margin:0px auto;
-   margin-bottom: 10px;
+    margin:0px auto;
+    margin-bottom: 10px;
   }
-  
-  
-  
-  
-  
   }
 
 
@@ -495,21 +459,16 @@ flex:0 0 calc(50% - 20px);
 
     .product{
     flex:0 0 calc(25% - 20px);
-     margin-bottom: 20px;
+    margin-bottom: 20px;
     }
-    
-    
-    
-    
-    
+
     }
 
 
 
 /* product details info */
-
 .det-center{
- box-shadow: 1px 1px 4px 1px gray;
+box-shadow: 1px 1px 4px 1px gray;
 }
 
 .det h2{
@@ -661,7 +620,7 @@ color: rgb(95, 95, 95);
 
 
 
-/* cart */
+/* CART */
 .cartItem{
 
   background: #6a994e; /* background: rgb(113, 160, 138); */
@@ -899,7 +858,7 @@ background: rgba(0,0,0,0.4);
 
 
 
- /* about */
+ /* ABOUT PAGE */
  .about{
    margin-top: 20px;
  }
@@ -915,45 +874,6 @@ background: rgba(0,0,0,0.4);
    font-size:18px;
 
  }
-
-/*make shift navbar and links*/
-nav {
-  /* list-style: none;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center;
-  
-  height:40px;
-
-  display: flex;
-  font-family: 'Gaegu', cursive;
-  font-size: 25px;
-  font-weight: bold;
-
-  justify-content: flex-end; */
-  /* padding: 10px 10px; ALL NAVS MUST HAVE THIS PADDING DESCRIPTION */
-
-  /* position: fixed; >>>>> this covers up welcome msg */
-  /* top: 0;
-  left: 0;
-  right: 0;
-  
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  margin: 0px;
-  background: #BC4749;
-  max-width: 1100px;
-  position: relative; */
-}
-
-/* nav a {
-  margin-left: 20px;
-}
-
-.navbar a:hover {
-  text-decoration: underline overline dotted;
-  color: white;
-} */
 
 /* 'what we do and why' */
 .about-title {
@@ -1003,5 +923,17 @@ nav {
   font-weight: bolder;
   font-size: larger;
   padding: 5px;
+  border: 2px solid ;
   border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+.walkthrough-button:hover {
+  border: 3px solid rgb(240, 238, 238);
+}
+
+.remnant {
+  display: flex;
+  justify-content: center;
 }

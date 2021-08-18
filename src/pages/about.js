@@ -53,20 +53,19 @@ export const About = () => {
 			</div>
 			
 
-			<div>
+			<div className='remnant'>
 				<a href="https://github.com/LaurenCovington/">
 					Code Housed Here 
 				</a>
 			</div>
 
-			<div>
-				<BrowserRouter>
-					<Link to="/login">Logout</Link>
-				</BrowserRouter>
-                
+			<div className='remnant'>
+				<a href="/">Logout</a>
             </div>
 
-			<Footer />
+			<div className='remnant'>
+				<Footer />
+			</div>
 			
 		</div>
 	);

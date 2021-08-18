@@ -35,24 +35,21 @@ const PretendFarmer = lazy(() => import('./pages/pretendfarmer'));
 const Products = lazy(() => import('./components/Products'));
 
 
-
 function App() {
-
-// THIS WORKS but manually apply <Navbar /> and hope that React.Fragment isnt super needed...:
   const routes = {
-    '/': () => <LandingPage />,
-    '/register': () => <Register />,
-    // '/login': () => <Login />,   >>>> it was supposed to be here but it never worked
-    '/about': () => <About />,
-    '/home': () => <Home />, // show <Products /> here? what exactly needs to be on home page at this point (12:26am, 8.17.21)
-    '/showOfferings': () => <Products />, // duped down below but not rebuilding offerings at this point...
+    '/': () => <LandingPage />, // *
+    '/register': () => <Register />, // *
+    '/login': () => <Login />,   // * over in pba_login or maybe use delia scrnshots to piece together?
 
-    '/demofarmerview': () => <PretendFarmer />,
-    '/demoofferingview': () => <Products />,
+    '/about': () => <About />, // DONE AND CART IS DONE
+    '/home': () => <Home />, // not needed at this point...
+    '/showOfferings': () => <Products />, // DONE
 
-    '/details/:id': () => <OfferingDetails />, // not ready yet
-    '/order': () => <OrderSummary />, // not ready yet
-    //'/categories': () => <CategoryList />,    >>>> arent these showing on home page already?
+    '/demofarmerview': () => <PretendFarmer />, // * 
+    '/demoofferingview': () => <Products />, // DONE
+
+    '/details/:id': () => <OfferingDetails />, // ** not ready yet
+    '/order': () => <OrderSummary /> // *
 };
 
   const routeResult = useRoutes(routes);

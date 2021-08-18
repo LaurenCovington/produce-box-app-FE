@@ -1258,3 +1258,82 @@ background: rgba(0,0,0,0.4);
   border-style: dotted;
 
     }
+
+/* whole registration container */
+.outermost-register-container {
+  background-color: #f2e8cf;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: left;
+}
+
+/* 'Register Here' */
+.outermost-register-container h1 {
+  background-color: #f2e8cf;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 45px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.outermost-register-container label {
+  margin-left: 15px;
+}
+
+/* registration fields themselves*/
+.outermost-register-container input {
+    margin: 5px 5px 5px 5px;
+    font-family: 'Gaegu', cursive;
+    font-weight: bolder;
+    font-size: 15px;
+    justify-content: center;
+    padding: 5px;
+    border: 2px solid ;
+    border-radius: 5px;
+    background-color: #A7C957;
+    color: rgb(58, 51, 51);
+}
+
+/*the select user field */
+.outermost-register-container select {
+  margin: 5px 5px 5px 5px;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: 15px;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+/* register button container */
+.register-button-bit {
+  display: flex;
+  align-items: center;
+}
+
+.register-button button {
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  /* padding: 15px 0px 15px 0px; */
+
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
+  font-size: large;
+
+  padding: 5px;
+  border: 2px solid ;
+  border-radius: 5px;
+  background-color: #A7C957;
+  color: rgb(58, 51, 51);
+}
+
+.register-button button:hover {
+  border: 3px solid rgb(240, 238, 238);
+}

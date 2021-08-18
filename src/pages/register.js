@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 //import "../../styles/home.scss";
 
 // sign up page, template from login.js
@@ -39,66 +41,65 @@ export const Register = () => {
 
 	return (
 
-		<div className="text-center mt-5">
-
-            <nav id="navbar">
-				<a href="/about">What We Do and Why</a>
-				<a href="/">Back to the Main Page</a>
-            </nav>
+		<div className="outermost-register-container">
+            <Navbar />
 
 			<h1>Register Here</h1>
-            {/* see line 32 for why commented out. renders just the same for presentation! */}
-                {/* { (store.user && store.user !== "" && store.user !== undefined) ? "Welcome, " + store.user :  */}
-                
-                <div className="registration-field-container">
-                    <div>
-                        <label>Preferred Name: </label>
-                        <input type="text" placeholder="preferred name" value={name} onChange={(e) => setName(e.target.value)}/>
-                    </div>
-                    <div>
-                        <label>Email Address: </label>
-                        <input type="text" placeholder="complete email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    </div>
-                    <div>
-                        <label>User Type: </label>
-                        <select defaultValue="Select User Type"> 
-                            <option defaultValue>Click to Choose</option>
-                            <option value="farmer">Farmer</option>
-                            <option value="community member">Community Resident</option>
-                            <option value="NPO rep">NPO Rep</option>
-                        </select><br />
-                    </div>
-                    <div>
-                        <label>Username: </label>
-                        <input type="text" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)}/>
-                    </div>
-                    {/* <input type="text" placeholder="user type" value={user_type} onChange={(e) => setUserType(e.target.value)}/> */}
-                    <div>
-                        <label>Password: </label>
-                        <input type="text" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                    </div>
-                    <div>
-                        <label>Delivery Address: </label>
-                        <input type="text" placeholder="See foods based on city!" value={address} onChange={(e) => setAddress(e.target.value)}/>
-                    </div>
-                    <div>
-                        <label>Phone Number: </label>
-                        <input type="text" placeholder="phone" value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                    </div>
-                    <div>
-                        <label>Organization: </label>
-                        <input type="text" placeholder="If any!" value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                    </div>
-                    
-                    
-                    {/* <input type="text" placeholder="contribution dropoff" value={contribution_dropoff} onChange={(e) => setContributionDropoff(e.target.value)}/>
-                    <input type="text" placeholder="donations sent" value={donations_sent} onChange={(e) => setDonationsSent(e.target.value)}/>
-                    <input type="text" placeholder="donations received" value={donations_received} onChange={(e) => setDonationsReceived(e.target.value)}/>
-                    <input type="text" placeholder="organization" value={organization} onChange={(e) => setOrganization(e.target.value)}/> */}
-                    {/* <input type="text" placeholder="delivery count" value={delivery_count} onChange={(e) => setDeliveryCount(e.target.value)}/> */}
-                    <a href='/home'><button className="movement-button" onClick={handleClick}>Register!</button></a> {/* <button> used to have onClick={handleClick} */}
-                </div>
-                </div>
+            <br />
+
+            <div>
+                <label>Preferred Name: </label>
+                <input type="text" placeholder="preferred name" value={name} onChange={(e) => setName(e.target.value)}/>
+            </div>
+            <div>
+                <label>Email Address: </label>
+                <input type="text" placeholder="complete email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            </div>
+            <div>
+                <label>User Type: </label>
+                <select defaultValue="Select User Type"> 
+                    <option defaultValue>Click to Choose</option>
+                    <option value="farmer">Farmer</option>
+                    <option value="community member">Community Resident</option>
+                    <option value="NPO rep">NPO Rep</option>
+                </select><br />
+            </div>
+            <div>
+                <label>Username: </label>
+                <input type="text" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+            </div>
+            {/* <input type="text" placeholder="user type" value={user_type} onChange={(e) => setUserType(e.target.value)}/> */}
+            <div>
+                <label>Password: </label>
+                <input type="text" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </div>
+            <div>
+                <label>Delivery Address: </label>
+                <input type="text" placeholder="See foods based on city!" value={address} onChange={(e) => setAddress(e.target.value)}/>
+            </div>
+            <div>
+                <label>Phone Number: </label>
+                <input type="text" placeholder="phone" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+            </div>
+            <div>
+                <label>Organization: </label>
+                <input type="text" placeholder="If any!" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+            </div>
+            <br />
+            
+            
+            {/* <input type="text" placeholder="contribution dropoff" value={contribution_dropoff} onChange={(e) => setContributionDropoff(e.target.value)}/>
+            <input type="text" placeholder="donations sent" value={donations_sent} onChange={(e) => setDonationsSent(e.target.value)}/>
+            <input type="text" placeholder="donations received" value={donations_received} onChange={(e) => setDonationsReceived(e.target.value)}/>
+            <input type="text" placeholder="organization" value={organization} onChange={(e) => setOrganization(e.target.value)}/> */}
+            {/* <input type="text" placeholder="delivery count" value={delivery_count} onChange={(e) => setDeliveryCount(e.target.value)}/> */}
+
+            <div className='register-button-bit'>
+                <a className="register-button" href='/home'>
+                    <button onClick={handleClick}>Register!</button>
+                </a>
+            </div>
+    </div>
                 )
 };
 

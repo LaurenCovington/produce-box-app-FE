@@ -37,15 +37,15 @@ const Products = lazy(() => import('./components/Products'));
 
 function App() {
   const routes = {
-    '/': () => <LandingPage />, // *
+    '/': () => <LandingPage />, // DONE
     '/register': () => <Register />, // *
-    '/login': () => <Login />,   // * over in pba_login or maybe use delia scrnshots to piece together?
+    '/login': () => <Login />,   // * copy paste from register, over in pba_login or maybe use delia scrnshots to piece together?
 
     '/about': () => <About />, // DONE AND CART IS DONE
-    '/home': () => <Home />, // not needed at this point...
+    '/home': () => <Home />, // not in play at this point...
     '/showOfferings': () => <Products />, // DONE
 
-    '/demofarmerview': () => <PretendFarmer />, // * 
+    '/demofarmerview': () => <PretendFarmer />, // DONE 
     '/demoofferingview': () => <Products />, // DONE
 
     '/details/:id': () => <OfferingDetails />, // ** not ready yet

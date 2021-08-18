@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="dra">
             <div className="drawers">
                 <ul  className={navOpen?"newLinks links":" links"} onClick={closeNavCart} >
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/showOfferings">See Offerings</a></li>
             {/* <li><Link to="/" onClick={handleCartNav} >Cart <i className="fas fa-shopping-cart cart"><span >0</span></i></Link></li> */}

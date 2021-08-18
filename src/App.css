@@ -938,6 +938,9 @@ background: rgba(0,0,0,0.4);
 .remnant {
   display: flex;
   justify-content: center;
+  background-color: #f2e8cf;
+  font-family: 'Gaegu', cursive;
+  font-weight: bolder;
 }
 
 /* pretend farmer (post and view cats, post offerings */
@@ -1150,3 +1153,108 @@ background: rgba(0,0,0,0.4);
 .show-offerings-button:hover {
   border: 3px solid rgb(240, 238, 238);
 }
+
+/* LANDING PAGE */
+.landingpage-text-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: stretch;
+  align-items: right;
+  flex-direction: row;
+  background-color: #f2e8cf;
+
+}
+
+/* With the PBA... */
+.landingpage-rundown {
+  display: flex;
+  width: 600px;
+
+  box-sizing: border-box;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  direction: rtl;
+
+  font-family: 'Gaegu', cursive;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 30px;
+  }
+
+/* Sign up for free... */
+  .landingpage-tag {
+    display: flex;
+    width: 400px;
+
+    text-transform: uppercase;
+    box-sizing: border-box;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* direction: rtl; */
+  
+    font-family: 'Gaegu', cursive;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 30px;
+    }
+
+    .landingpage-photo-container {
+      display: flex;
+      justify-content: center;
+      background-color: #f2e8cf;
+      max-width: 1800px;;
+    }
+
+    .landingpage-photo {
+      /* display: flex;
+      margin: 10px;
+      order: 2;
+      max-width: 850px;
+      max-height: 200px;
+      box-sizing: border-box;
+      align-items: center; */
+    
+    /* display: flex;
+    background-image: url(https://images.unsplash.com/photo-1567581634682-72b77dd7f242?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background-size: cover;
+    background-position: center;
+    background-color: #f2e8cf; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 190px;
+    max-width: 100%;
+    position: relative; */
+
+    /* banner style below */
+    width: 600px; /* was 100%*/
+    /* background-image: url(https://image.shutterstock.com/image-photo/pea-shoots-rows-on-garden-600w-1619642668.jpg); */
+    height: 405px;
+    background-color: #f2e8cf;
+    background-position: center;
+
+    display: flex;
+    align-self: baseline;
+
+
+  box-sizing: border-box;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  direction: rtl;
+
+  font-family: 'Gaegu', cursive;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 30px;
+  border-style: dotted;
+
+    }
